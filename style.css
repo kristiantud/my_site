@@ -11,19 +11,27 @@ html{
     height: 100%;
     background-color: #1E90FF;
     font-family: 'Open Sans Condensed', sans-serif;
+    
 }
 
 .right-side{
     position:absolute;
     /* background-color: gray; */
     z-index: 0;
-    /* background: url('../my_site/images/bg.jpg') no-repeat center center fixed; */
-    /* background-size: cover; */
     
+    background: url('../my_site/images/bg-blur.jpg') no-repeat center center fixed;
+    background-size: cover;
     top:0vh;
     left:30%;
     min-width: 70%;
     height: 100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: grid;
+    /* grid-auto-flow: row; */
+    grid-template-areas: "education experience"
+                        "skills experience";
+    place-items:center;
+    
 }
 
 /* .right-side:after{
@@ -59,8 +67,8 @@ html{
 
 .about-content{
     padding-top: 6%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 13%;
+    margin-right: 13%;
     text-align: justify;
     padding-bottom: 5%;
     font-size: 19px;
@@ -79,15 +87,15 @@ html{
 }
 
 #hr-left{
-    width: 60%; height: 1px; border: none; background-color: black;
+    width: 50%; height: 1px; border: none; background-color: black;
 }
 
 #hr-right{
-    width: 50%;
+    width: 10%;
     height: 10px;
     border: none;
     background-color: #1E90FF;
-    margin-left: 0;
+    /* margin-left: 0; */
 }
 
 /* .right-side-content-wrapper{
@@ -101,11 +109,50 @@ html{
 } */
 
 #right-title{
+    
     font-family: 'Bebas Neue', cursive;
     font-size: 55px;
 }
 
-.title-holder{
-    width: 15%;
+/* .title-holder{
+    width: 20%;
+} */
+
+.content-holder{
+    padding-top: 5px;
+}
+
+#content-title{
+    font-size: 25px;
+}
+
+#content-subtitle{
+    font-size: 18px;
+    
+}
+
+.right-content{
+    color: white;
+    text-align: center;
+    
+    
+}
+
+#education{
+    grid-area: education;
+}
+
+#skills{
+    grid-area: skills;
+}
+
+#experience{
+    grid-area: experience;
+}
+
+.element {
+    /* margin-left: 35%;
+    margin-right: 35%; */
+    padding: 5px;
 }
 
