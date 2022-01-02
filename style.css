@@ -1,22 +1,31 @@
-html{
+html,body{
     /* font-family: 'Josefin Sans', sans-serif; */
     /* background-color: tra; */
+    margin: 0;
+    padding: 0;
+}
+
+.site-wrapper{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .left-side{
-    width: 30%;
-    position:fixed;
+    width: 33%;
+    /* position:fixed;
     top:0;
-    left:0;
+    left:0; */
     height: 100%;
-    background-color: #9D0EFA;
+    background-color: #9C52E7;
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
     
 }
 
 .right-side{
-    position:absolute;
+    /* position:absolute; */
     /* background-color: gray; */
     z-index: 0;
     
@@ -24,9 +33,10 @@ html{
     background-size: cover; */
     color: black;
     background-color: lightgray;
-    top:0vh;
-    left:30%;
-    min-width: 70%;
+    /* top:0vh;
+    left:30%; */
+    /* min-width: 70%; */
+    
     height: 100%;
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
@@ -35,17 +45,19 @@ html{
     /* grid-template-areas: "education experience"
                         "skills experience";
     place-items:center; */
-    display:flex;
-    flex-wrap: wrap;
+    
+    /* justify-content: center; */
+    
 
     
 }
 
 .right-side-leftcontainer{
-    position:absolute;
+    /* position:absolute; */
     width: 50%;
     height: 100%;
-    padding-left: 4%;
+
+    
 }
 
 .right-side-rightcontainer{
@@ -53,6 +65,7 @@ html{
     width: 50%;
     left: 50%;
     height: 100%;
+    
 }
 
 /* .right-side:after{
@@ -61,7 +74,7 @@ html{
 
 
 .main-content{
-    padding-top: 20%;
+    padding-top: 15%;
     text-align:center;
     justify-content:center;
     display:grid;
@@ -115,7 +128,7 @@ html{
     width: 20%;
     height: 10px;
     border: none;
-    background-color: #9D0EFA;
+    background-color: #9C52E7;
     margin-left: 0;
 }
 
@@ -155,7 +168,8 @@ html{
 .right-content{
     /* text-align: center; */
     width: 70%;
-    margin: 15%;
+    /* margin: 15%; */
+    
     
 }
 
@@ -176,4 +190,24 @@ html{
 .element {  
     padding: 5px 0;
 }
+
+
+
+@media only screen and (max-width: 500px) {
+    .left-side{
+        width: 100%;
+    
+    }
+
+    .main-content{
+        padding-top: 5%;
+    }
+
+    #my-picture{
+        width: 200px;
+        height: auto;
+        
+
+    }
+  }
 
