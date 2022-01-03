@@ -18,7 +18,7 @@ html,body{
     top:0;
     left:0; */
     height: 100vh;
-    background-color: #07ab94;
+    background-color: #8a3ddf;
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
     
@@ -138,7 +138,7 @@ html,body{
     width: 20%;
     height: 10px;
     border: none;
-    background-color: #07ab94;
+    background-color: #8a3ddf;
     margin-left: 0;
 }
 
