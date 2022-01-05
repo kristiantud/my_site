@@ -18,7 +18,7 @@ html,body{
     top:0;
     left:0; */
     height: 100vh;
-    background-color: #8a3ddf;
+    background-color: #9fb6ff;
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
     
@@ -32,7 +32,7 @@ html,body{
     /* background: url('../my_site/images/bg-blur.jpg') no-repeat center center fixed;
     background-size: cover; */
     color: black;
-    background-color: lightgray;
+    background-color: #f1f1f1;
     /* top:0vh;
     left:30%; */
     /* min-width: 70%; */
@@ -138,7 +138,7 @@ html,body{
     width: 20%;
     height: 10px;
     border: none;
-    background-color: #8a3ddf;
+    background-color: #9fb6ff;
     margin-left: 0;
 }
 
