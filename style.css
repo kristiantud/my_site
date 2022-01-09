@@ -18,16 +18,39 @@ html,body{
     top:0;
     left:0; */
     height: 100vh;
-    background-color: #4d75f7;
+    background-color: #1995ff;
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
     
 }
 
+.font-wrapper{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    margin: 10px;
+    padding: 5px;
+    /* visibility: hidden; */
+}
+
+.font-size{
+    display: flex;
+    
+}
+
+.font-size button{
+    width: 100%;
+    /* font-family: 'PT Sans Narrow', sans-serif; */
+}
+
+
 .right-side{
     /* position:absolute; */
     /* background-color: gray; */
-    z-index: 0;
+    z-index: -1;
     
     /* background: url('../my_site/images/bg-blur.jpg') no-repeat center center fixed;
     background-size: cover; */
@@ -121,7 +144,7 @@ html,body{
 #my-name{
     font-family: 'Bebas Neue', cursive;
     padding-top: 10%;
-    font-size: 55px;
+    font-size: 3.5vw;
 }
 
 #my-picture{
@@ -138,7 +161,7 @@ html,body{
     width: 20%;
     height: 10px;
     border: none;
-    background-color: #4d75f7;
+    background-color: #1995ff;
     margin-left: 0;
 }
 
@@ -155,7 +178,7 @@ html,body{
 #right-title{
     
     font-family: 'Bebas Neue', cursive;
-    font-size: 55px;
+    font-size: 3.5vw;
 }
 
 /* .title-holder{
@@ -251,6 +274,16 @@ html,body{
     .about-content{
         font-size: 4vw;
     }
+
+    #my-name{
+        font-size: 12vw;
+    }
+
+    #right-title{
+        font-size: 12vw;
+    }
+
+
 
     
   }

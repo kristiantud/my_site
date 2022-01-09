@@ -17,6 +17,9 @@
 
     <script src="https://kit.fontawesome.com/020e1867a2.js" crossorigin="anonymous"></script>
 
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     
     
 
@@ -24,8 +27,17 @@
 </head>
 <body>
     
+    
     <div class="site-wrapper">
         <div class="left-side">
+            <div class="font-wrapper">
+                <span id="size-span">Font Size:</span>
+                <div class="font-size">
+                    <button id="small-font" onclick="changeFont('small')">S</button>
+                    <button id="big-font" onclick="changeFont('large')">L</button>
+                </div>
+                
+            </div>
             <div class="main-content">
                 <img id="my-picture" src="images/pfp1.png">
                 <span id="my-name">KRISTIAN TUD</span>
@@ -65,14 +77,14 @@
                     </div>
                     <div class="content-holder">
                         <div class="element">
-                            <span id="content-title">Bethlehem Catholic High School</span>
+                            <span id="content-title" name="content-title">Bethlehem Catholic High School</span>
                             <br>
-                            <span id="content-subtitle">Secondary School</span>
+                            <span id="content-subtitle" name="content-subtitle">Secondary School</span>
                         </div>
                         <div class="element">
-                            <span id="content-title">University of Saskatchewan</span>
+                            <span id="content-title" name="content-title">University of Saskatchewan</span>
                             <br>
-                            <span id="content-subtitle">Computer Science</span>
+                            <span id="content-subtitle" name="content-subtitle">Computer Science</span>
                         </div>
                         
                         
@@ -88,21 +100,21 @@
                     </div>
     
                     <div class="element">
-                        <span id="content-title">Development</span>
+                        <span id="content-title" name="content-title">Development</span>
                         <br>
-                        <span id="content-subtitle">Javascript (Node.js), CSS3, HTML5, jQuery, mySQL, MongoDB, AWS, Java, Python, C, Scala, Akka, Bash, TXL </span>
+                        <span id="content-subtitle" name="content-subtitle">Javascript (Node.js), CSS3, HTML5, jQuery, mySQL, MongoDB, AWS, Java, Python, C, Scala, Akka, Bash, TXL </span>
                     </div>
     
                     <div class="element">
-                        <span id="content-title">Design</span>
+                        <span id="content-title" name="content-title">Design</span>
                         <br>
-                        <span id="content-subtitle">Figma, AdobeXD</span>
+                        <span id="content-subtitle" name="content-subtitle">Figma, AdobeXD</span>
                     </div>
     
                     <div class="element">
-                        <span id="content-title">Additional</span>
+                        <span id="content-title" name="content-title">Additional</span>
                         <br>
-                        <span id="content-subtitle">Adobe Photoshop, Adobe Premiere Pro</span>
+                        <span id="content-subtitle" name="content-subtitle">Adobe Photoshop, Adobe Premiere Pro</span>
                     </div>
                 </div>
             </div>
@@ -114,40 +126,40 @@
                         <hr id="hr-right">
                     </div>
                     <div class="element">
-                        <span id="content-title">boardem.co</span>
+                        <span id="content-title" name="content-title">boardem.co</span>
                         <br>
-                        <span id="content-subtitle">Worked with the client to design a website that they are satisfied with, and built the website using HTML5, Javascript, CSS3.</span>
+                        <span id="content-subtitle" name="content-subtitle">Worked with the client to design a website that they are satisfied with, and built the website using HTML5, Javascript, CSS3.</span>
                     </div>
                     <div class="element">
-                        <span id="content-title">CMPT350</span>
+                        <span id="content-title" name="content-title">CMPT350</span>
                         <br>
-                        <span id="content-subtitle">Created a to-do list/calendar that allowed the user to add and remove tasks on their chosen dates. Users could also create 
+                        <span id="content-subtitle" name="content-subtitle">Created a to-do list/calendar that allowed the user to add and remove tasks on their chosen dates. Users could also create 
                             their own accounts to save their tasks. Used HTML5, Node.js, jQuery, CSS3, MySQL to store username and passwords and calendar tasks, Bootstrap for most of the front-end development.
                         </span>
                     </div>
                     <div class="element">
-                        <span id="content-title">CMPT370</span>
+                        <span id="content-title" name="content-title">CMPT370</span>
                         <br>
-                        <span id="content-subtitle">Worked with a group to create a client-side software based on the game 'Hanabi'. I was in charge of creating the 
+                        <span id="content-subtitle" name="content-subtitle">Worked with a group to create a client-side software based on the game 'Hanabi'. I was in charge of creating the 
                             part of the software that is responsible for sending and receiving messages from the game server. I also helped design the AI that helps the 
                             user find the best move.
                         </span>
                     </div>
                     <div class="element">
-                        <span id="content-title">CMPT481</span>
+                        <span id="content-title" name="content-title">CMPT481</span>
                         <br>
-                        <span id="content-subtitle">Worked with a group to re-design the registration process of the PAWS site for a project.</span>
+                        <span id="content-subtitle" name="content-subtitle">Worked with a group to re-design the registration process of the PAWS site for a project.</span>
                     </div>
     
                     <div class="element">
-                        <span id="content-title">Mandarin Restaurant</span>
+                        <span id="content-title" name="content-title">Mandarin Restaurant</span>
                         <br>
-                        <span id="content-subtitle">Designed a minimal website for the client.</span>
+                        <span id="content-subtitle" name="content-subtitle">Designed a minimal website for the client.</span>
                     </div>
                     <div class="element">
-                        <span id="content-title">COD: Warzone Stats Discord Bot</span>
+                        <span id="content-title" name="content-title">COD: Warzone Stats Discord Bot</span>
                         <br>
-                        <span id="content-subtitle">Created a discord bot using Node.js that allows user to retreive their last n stats. </span>
+                        <span id="content-subtitle" name="content-subtitle">Created a discord bot using Node.js that allows user to retreive their last n stats. </span>
                     </div>
                 </div>
             </div> 
@@ -155,5 +167,36 @@
         </div>
 
     </div>
+
+    <script>
+        function changeFont(val){
+            var titles = document.getElementsByName("content-title");
+            var subtitles = document.getElementsByName("content-subtitle");
+            if (val == 'small'){
+                document.getElementById("my-about").style.fontSize = '4vw';
+                for (var i = 0; i < titles.length; i++){
+                    titles[i].style.fontSize = '5vw';
+                    subtitles[i].style.fontSize = '3vw';
+                }
+            } else if (val == 'large'){
+                document.getElementById("my-about").style.fontSize = '4.5vw';
+                for (var i = 0; i < titles.length; i++){
+                    titles[i].style.fontSize = '6vw';
+                    subtitles[i].style.fontSize = '4vw';
+                }
+            }
+        }
+
+        // show the font-size thing when the site loads
+        var sWidth = $(window).width();
+        if (sWidth < 708){
+            // make the font-resize visible
+            $('.font-wrapper').css('visibility','visible');
+        } else {
+            $('.font-wrapper').css('visibility','hidden');
+        }
+
+        
+    </script>
 </body>
 </html>
