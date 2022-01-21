@@ -49,6 +49,14 @@ html,body{
     margin: 1px;
 }
 
+#close{
+    position: absolute;
+    background-color: white;
+    right: 0;
+    font-size: 15px;
+    top: -15px;
+}
+
 
 .right-side{
     /* position:absolute; */
@@ -136,11 +144,11 @@ html,body{
 
 .about-content{
     padding-top: 5%;
-    width: 70%;
+    width: 75%;
     margin:auto;
     text-align: justify;
     padding-bottom: 5%;
-    font-size: 1.05vw;
+    font-size: 1.0vw;
     
 }
 
@@ -198,14 +206,16 @@ html,body{
 
 #content-subtitle{
     font-size: 0.95vw;
+    text-align: justify;
+        display:block;
     
 }
 
 .right-content{
     /* text-align: center; */
-    width: 70%;
+    width: 75%;
     margin: auto;
-    padding-top: 10%;
+    padding-top: 7%;
     /* margin: 15%; */
     
     
@@ -274,8 +284,7 @@ html,body{
     
     #content-subtitle{
         font-size: 4vw;
-        text-align: justify;
-        display:block;
+        
         
     }
 

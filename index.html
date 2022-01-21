@@ -31,8 +31,9 @@
     
     <div class="site-wrapper">
         <div class="left-side">
-            <div class="font-wrapper">
+            <div class="font-wrapper" >
                 <span id="size-span">Font Size:</span>
+                <div id="close" onclick="closeFont()">close</div>
                 <div class="font-size">
                     <button id="small-font" onclick="changeFont('small')">S</button>
                     <button id="big-font" onclick="changeFont('large')">L</button>
@@ -58,7 +59,7 @@
             <div class="about-content">
                 <span id="my-about">
                     My name is Kristian Tud. My family came to Canada from the Philippines when I was 12, and I am grateful to be here. One of my biggest goals is to 
-                    be the best web developer that I can possibly be. My hobbies include Basketball, Weightlifting, Painting, Biking, First-Person Shooters, and Hiking. I am extremely driven
+                    be the best web developer that I can possibly be. My hobbies include Basketball, Weightlifting, Painting, Guitar, Philosophy, Biking, First-Person Shooters, and Hiking. I am extremely driven
                     when trying to achieve a goal. I try to be good at everything I do.
                 </span>
             </div>
@@ -136,7 +137,7 @@
                     <div class="element">
                         <span id="content-title" name="content-title">Web Development (CMPT350)</span>
                         <br>
-                        <span id="content-subtitle" name="content-subtitle">Created a to-do list/calendar that allowed the user to add and remove tasks on their chosen dates. Users could also create 
+                        <span id="content-subtitle" name="content-subtitle">Created a to-do list/calendar that allows the user to add and remove tasks on their chosen dates. Users could also create 
                             their own accounts to save their tasks. Used HTML5, Node.js, jQuery, CSS3, MySQL to store username and passwords and calendar tasks, Bootstrap for most of the front-end development.
                         </span>
                     </div>
@@ -188,6 +189,10 @@
                 }
                 
             }
+        }
+
+        function closeFont(){
+            $('.font-wrapper').css('visibility','hidden');
         }
 
         // show the font-size thing when the site loads
