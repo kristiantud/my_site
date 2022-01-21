@@ -58,7 +58,7 @@ html,body{
     /* background: url('../my_site/images/bg-blur.jpg') no-repeat center center fixed;
     background-size: cover; */
     color: black;
-    background-color: #f1f1f1;
+    background-color: #d2d2e2;
     /* top:0vh;
     left:30%; */
     /* min-width: 70%; */
@@ -179,7 +179,6 @@ html,body{
 } */
 
 #right-title{
-    
     font-family: 'Bebas Neue', cursive;
     font-size: 3.5vw;
 }
@@ -193,17 +192,18 @@ html,body{
 }
 
 #content-title{
+    font-family: 'Jost', sans-serif;
     font-size: 1.3vw;
 }
 
 #content-subtitle{
-    font-size: 0.9vw;
+    font-size: 0.95vw;
     
 }
 
 .right-content{
     /* text-align: center; */
-    width: 65%;
+    width: 70%;
     margin: auto;
     padding-top: 10%;
     /* margin: 15%; */
@@ -235,6 +235,7 @@ html,body{
 @media only screen and (max-width: 700px) {
     .left-side{
         width: 100%;
+        height: 100vh;
     
     }
     .right-side{
@@ -248,7 +249,9 @@ html,body{
 
     .right-side-rightcontainer{
         width: 100%;
-        height: 120vh;
+        height: auto;
+        padding-bottom: 150px;
+        
     }
 
     .main-content{
@@ -266,20 +269,28 @@ html,body{
     }
 
     #content-title{
-        font-size: 5vw;
+        font-size: 5.1vw;
     }
     
     #content-subtitle{
-        font-size: 3vw;
+        font-size: 4vw;
+        text-align: justify;
+        display:block;
         
+    }
+
+    .contact-content{
+        padding-bottom: 3%;
     }
 
     .about-content{
         font-size: 4vw;
+        padding-top: 2%;
     }
 
     #my-name{
         font-size: 12vw;
+        padding-top:5%;
     }
 
     #right-title{
