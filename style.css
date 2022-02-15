@@ -255,6 +255,7 @@ html,body{
     .right-side-leftcontainer{
         width: 100%;
         height: auto;
+        padding-top: 50px;
     }
 
     .right-side-rightcontainer{
