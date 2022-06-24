@@ -18,7 +18,7 @@ html,body{
     top:0;
     left:0; */
     height: 100vh;
-    background-color: #1995ff;
+    background-color: rgb(15, 129, 196);
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
     
@@ -121,10 +121,15 @@ html,body{
     flex-wrap: wrap;
     /* display:grid;
     grid-auto-flow:row; */
-    font-size: 23px;
+    font-size: 22px;
+    
     width: 50%;
     margin:auto;
     
+}
+
+#my-title{
+    /* font-weight:bold; */
 }
 
 .contact-content{
@@ -173,7 +178,7 @@ html,body{
     width: 20%;
     height: 10px;
     border: none;
-    background-color: #1995ff;
+    background-color: rgb(12, 119, 179);
     margin-left: 0;
 }
 
@@ -268,6 +273,11 @@ html,body{
 
     .main-content{
         padding-top: 7%;
+        
+    }
+
+    #my-title{
+        font-weight: bold;
     }
 
     #my-picture{
@@ -295,8 +305,11 @@ html,body{
     }
 
     .about-content{
-        font-size: 4vw;
-        padding-top: 2%;
+        font-size: 18px;
+
+
+        text-align: justify;
+        
     }
 
     #my-name{
