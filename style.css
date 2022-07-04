@@ -18,7 +18,7 @@ html,body{
     /* position:fixed;
     top:0;
     left:0; */
-    height: 110vh;
+    height: 100vh;
     background-color: rgb(15, 129, 196);
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
@@ -252,7 +252,7 @@ html,body{
 @media only screen and (max-width: 700px) {
     .left-side{
         width: 100%;
-        height: 100vh;
+        height: 120vh;
     
     }
     .right-side{
@@ -282,7 +282,7 @@ html,body{
     }
 
     #my-picture{
-        width: 200px;
+        width: 180px;
         height: auto;
     
     }
@@ -306,7 +306,7 @@ html,body{
     }
 
     .about-content{
-        font-size: 18px;
+        font-size: 17px;
 
 
         text-align: justify;
