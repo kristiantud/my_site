@@ -13,11 +13,12 @@ html,body{
 }
 
 .left-side{
+    display: fixed;
     width: 33%;
     /* position:fixed;
     top:0;
     left:0; */
-    height: 100vh;
+    height: 110vh;
     background-color: rgb(15, 129, 196);
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
@@ -75,7 +76,7 @@ html,body{
     flex-wrap:wrap;
     /* font-family: 'Open Sans Condensed', sans-serif; */
     font-family: 'PT Sans Narrow', sans-serif;
-    max-height: 100%;
+    height: auto;
     /* display: grid; */
     /* grid-auto-flow: row; */
     /* grid-template-areas: "education experience"
@@ -123,7 +124,7 @@ html,body{
     grid-auto-flow:row; */
     font-size: 22px;
     
-    width: 50%;
+    width: 60%;
     margin:auto;
     
 }
