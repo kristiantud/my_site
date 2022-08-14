@@ -1,13 +1,14 @@
 body,html{
     padding: 0;
     margin: 0;
+    font-family: 'Jost', sans-serif;
 
 }
 
 .site-wrapper{
     height: 100vh;
     background-color: #ffffff;
-    max-width: 1136px;
+    max-width: 1200px;
     padding: 0 32px;
     margin: 0 auto;
 }
@@ -29,9 +30,28 @@ body,html{
 ._card{
     border-radius: 32px;
     background-color: var(--card-color);
-    box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 8%);
+    box-shadow: 0.2rem 0.4rem 12rem rgba(33, 64, 131, 0.24);
     padding: 32px;
     transition: var(--transition-delay);
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+}
+
+#intro_intro{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#memoji{
+    height: 200px;
+    width: 200px;
+}
+
+.card-title{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
+    display: inline-block;
+    padding-bottom: 15px;
 }
 
 #intro{
@@ -40,11 +60,15 @@ body,html{
 }
 
 #intro_span{
-
+    
 }
 
 #intro_name{
-    font-size: 30px;
+    font-size: 70px;
+    font-family: 'Playfair Display SC', serif;
+    background: -webkit-linear-gradient(#34e89e, #0f3443);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #map{
@@ -57,4 +81,23 @@ body,html{
 }
 #pictures img{
     border-radius: 32px;
+}
+
+#bikestats{
+    grid-column:4;
+    grid-row: 2/4;
+}
+
+.stat{
+    padding-bottom: 10px;
+}
+
+.stat_title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+}
+
+.stat_value{
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
 }
