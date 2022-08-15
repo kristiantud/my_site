@@ -30,7 +30,7 @@ body,html{
 ._card{
     border-radius: 32px;
     background-color: var(--card-color);
-    box-shadow: 0.2rem 0.4rem 12rem rgba(33, 64, 131, 0.24);
+    box-shadow: 0.2rem 0.4rem 12rem rgba(9, 18, 37, 0.267);
     padding: 32px;
     transition: var(--transition-delay);
     font-family: 'Jost', sans-serif;
@@ -99,11 +99,92 @@ body,html{
 
 .stat_value{
     font-size: 30px;
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
     
 }
 
 #spotify{
     grid-row: 3;
     grid-column: 2/4;
+    display: flex;
 }
+
+#spotify-album-cover{
+    height: 200px;
+    width: 200px;
+    border-radius: 32px;
+}
+
+.spotify-album-cover-container{
+    height: 205px;
+    width: 246px;
+    
+}
+
+.spotify-info-container{
+    width: 246px;
+
+}
+
+#spotify-logo{
+    height: 100px;
+    width: 100px;
+}
+
+#song_title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#song_artist{
+    font-size: 19px;
+}
+
+.playing-status-container{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.animation-container{
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.spotify-animation-1{
+    animation: playing 0.8s infinite ease;
+}
+
+.spotify-animation-2{
+    animation: playing 1.0s infinite ease;
+}
+
+.spotify-animation-3{
+    animation: playing 1.2s infinite ease;
+}
+
+.spotify-animation-1, .spotify-animation-2,.spotify-animation-3{
+    
+    width: 3px;
+    border-radius: 1.5px;
+    background-color: #2ad45e;
+    margin-right: 3px;
+}
+
+
+@keyframes playing {
+    0% {
+      height: 3px;
+    }
+    50% {
+      height: 12px;
+    }
+    100% {
+      height: 3px;
+    }
+  }
