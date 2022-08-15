@@ -99,5 +99,11 @@ body,html{
 
 .stat_value{
     font-size: 30px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+#spotify{
+    grid-row: 3;
+    grid-column: 2/4;
 }

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="new_style.css">
@@ -32,7 +33,7 @@
 
     
 </head>
-<body>
+<body onload="spotifyAPI()">
     
     
     <div class="site-wrapper">
@@ -42,7 +43,7 @@
                 <br>
                 <span id="intro_span">
                     <span id="intro_intro">Hello! My name is</span><br><span id="intro_name">Kristian Tud</span><br>
-                    I am a Computer Science graduate from USASK. My interests are Full-Stack Website Development, Software Engineering, Philosophy and Psychology.  Nice to meet you!
+                    I am a Computer Science graduate from USASK. I aspire to become a Full-Stack Website Developer/Software Engineer. I am also very interested in Philosophy and Psychology.  Nice to meet you!
                 </span>
             </div>
             <div class="_card" id="map">
@@ -62,20 +63,22 @@
                         <div class="carousel-item active">
                             <img src="/images/carousel/3.jpg" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carousel-item">
-                            <img src="/images/carousel/2.png" class="d-block w-100" alt="...">
-                        </div>
+                        
                         <div class="carousel-item">
                             <img src="/images/carousel/6.JPG" class="d-block w-100" alt="...">
                         </div>
+                        
                         <div class="carousel-item">
                             <img src="./images/carousel/4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/carousel/2.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="./images/carousel/5.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./images/carousel/1.JPG" class="d-block w-100" alt="...">
+                            <img src="./images/carousel/1.jpg" class="d-block w-100" alt="...">
                         </div>
             
                     </div>
@@ -114,8 +117,13 @@
                 </div>
             </div>
 
-
-
+            <div class="_card" id="spotify">
+                <span>Last Played</span>
+                <br>
+                <span id="song_title">Song Title</span>
+                <br>
+                <span id="song_artist">Artist</span>
+            </div>
         </div>
             
             
@@ -123,6 +131,7 @@
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
     
 </body>
 </html>
