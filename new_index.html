@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="new_style.css">
@@ -37,6 +38,9 @@
     
     
     <div class="site-wrapper">
+        <div class="navbar">
+            <span id="navbar-span">ktud</span>
+        </div>
         <div class="grid">
             <div class="_card" id="intro">
                 <img src="./images/memoji.png" id="memoji">
@@ -98,12 +102,12 @@
                 <div class="stat">
                     <span class="stat_title">Workouts</span>
                     <br>
-                    <span class="stat_value">63</span>
+                    <span class="stat_value">67</span>
                 </div>
                 <div class="stat">
                     <span class="stat_title">Total Distance</span>
                     <br>
-                    <span class="stat_value">798.08km</span>
+                    <span class="stat_value">842.76km</span>
                 </div>
                 <div class="stat">
                     <span class="stat_title">Longest Distance</span>
@@ -113,7 +117,7 @@
                 <div class="stat">
                     <span class="stat_title">Calories Burned</span>
                     <br>
-                    <span class="stat_value">20,166</span>
+                    <span class="stat_value">21,332</span>
                 </div>
             </div>
 
@@ -138,6 +142,35 @@
                     <span id="song_artist">Artist</span>
                 </div>
             </div>
+
+            <div class="_card" id="projects">
+                <span class="card-title" id="freelancespan">Freelance Projects</span>
+                <div class="project_item">
+                    <img src="./images/cc.jpg" id="project_img">
+                    <span class="project-item-span">ComplidoCars.com</span>
+                </div>
+                <hr>
+                <div class="project_item">
+                    <img src="" id="project_img">
+                    <span class="project-item-span">boardem.co</span>
+                </div>
+                <hr>
+            </div>
+
+            <div class="_card" id="github" onclick="goTo('github')">
+                <a href="#" id="github-link-container">
+                    <ion-icon name="logo-github" id="github-icon" class="link-card-icon"></ion-icon>
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+
+            <div class="_card" id="instagram" onclick="goTo('instagram')">
+                <a href="#" id="instagram-link-container">
+                    <ion-icon name="logo-instagram" id="instagram-icon" class="link-card-icon"></ion-icon>
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+            
         </div>
             
             
@@ -146,6 +179,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
 </body>
 </html>

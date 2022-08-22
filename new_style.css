@@ -13,6 +13,27 @@ body,html{
     margin: 0 auto;
 }
 
+.navbar{
+    width: 100%;
+    height: 150px;
+    display: table;
+
+}
+
+
+#navbar-span{
+    font-size: 40px;
+    font-family: 'Yeseva One', cursive;
+    background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   letter-spacing: -1px;
+   line-height: 95px;
+   display: table;
+    margin: 0 auto;
+   
+}
+
 .grid{
     display: grid;
     position: relative;
@@ -43,8 +64,8 @@ body,html{
 }
 
 #memoji{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 
 .card-title{
@@ -66,9 +87,12 @@ body,html{
 #intro_name{
     font-size: 70px;
     font-family: 'Playfair Display SC', serif;
-    background: -webkit-linear-gradient(#34e89e, #0f3443);
+    /* background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 ); */
+    background-image: radial-gradient( circle farthest-corner at -4.5% 34.3%,  rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90% );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+   letter-spacing: -1px;
+   /* line-height: 75px; */
 }
 
 #map{
@@ -114,7 +138,7 @@ body,html{
 #spotify-album-cover{
     height: 200px;
     width: 200px;
-    border-radius: 32px;
+    /* border-radius: 32px; */
 }
 
 .spotify-album-cover-container{
@@ -134,7 +158,7 @@ body,html{
 }
 
 #song_title{
-    font-size: 30px;
+    /* font-size: 30px; */
     font-weight: bold;
 }
 
@@ -188,3 +212,80 @@ body,html{
       height: 3px;
     }
   }
+
+
+  #projects{
+    grid-row: 3/5;
+  }
+
+  .project_item{
+    display: flex;
+    
+  }
+
+  #project_img{
+    height: 25px;
+    width: 25px;
+  }
+
+  .project-item-span{
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+
+  #github{
+    background-color: #171515; 
+    /* padding: 5%; */
+    text-align: center;
+    /* padding-top: 50px; */
+
+    position: relative;
+  }
+
+  #github:hover{
+    cursor: pointer;
+  }
+
+  #github-link-container{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+    
+  }
+
+ 
+
+  #card-arrow{
+    height: 30px;
+    width: 30px;
+    color: white;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  #instagram{
+    background: radial-gradient( circle farthest-corner at 35% 90%, #fec564, transparent 50% ), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient( ellipse farthest-corner at 20% -50%, #5258cf, transparent 50% ), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient( ellipse farthest-corner at 60% -20%, #893dc2, transparent 50% ), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient( #6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100% );
+    text-align: center;
+    position: relative;
+}
+
+  #instagram-link-container{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+    
+  }
+
+  .link-card-icon{
+    padding-top: 40px;
+    height: 110px;
+    width: 110px;
+    color: white;
+  }
+
+
+ 

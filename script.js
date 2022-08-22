@@ -1,10 +1,10 @@
 
 function spotifyAPI() {
     // get spotify recently played
-    // let token = "Bearer " + "";
     let xhr = new XMLHttpRequest();
+    const token = 'BQAffhFLwMhbnEpWG53meNhPGAVUcvFmehV6HpqJwY6MzCXc-ssMN5ltZ5kXS1LX7wG8MaAXUtsLcx_qIRS5WTxPgXu-YgvlQjfBJFcSBnNGxWgLuCWZcNE41ll_RFw5KT7pppNuO4ZtOxhnQWulCSVUFdoHiVKtmzchEZqm3pZqoN_SCCQXOFoV1OWLk_B0oOKZNsjZ';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=1484811043508");
-    xhr.setRequestHeader('Authorization', 'Bearer BQBcLgx5YxNnWYiAEBbbDWEM909JVOK0UjyS5C3OvZV5OcJ9vZw7WJcYry4E-vgaQrPilUZPwX8tiZPVZW2cSKwY_1tMSdspxvViHzvAiA_xPk-gk9crXOlvIXMo7mJ-BOv31vim0dg8rXnto94HY1aSOwWcwE6uW1p_2nda2T4gVhqt1G5fL3sV67ZImbWTHrXU60zE');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
 
     xhr.onload = () => {
@@ -34,3 +34,35 @@ function spotifyAPI() {
 }
 
 
+
+// post request to get token
+
+// const clientId = '';
+// const clientSecret = '';
+
+// const _getToken = async () => {
+//     const result = await fetch('https://accounts.spotify.com/api/token', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': "application/x-www-form-urlencoded",
+//             'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret) 
+//         },
+//         body: 'grant_type=client_credentials'
+//     });
+
+//     const data = await result.json();
+//     return data.access_token;
+// };
+
+
+// var token = _getToken.access_token;
+
+function goTo(site){
+    if (site === "github"){
+        window.open("https://github.com/kristiantud/", '_blank').focus();
+    }
+
+    if (site==="instagram"){
+        window.open("https://instagram.com/ktud__/", '_blank').focus();
+    }
+}
