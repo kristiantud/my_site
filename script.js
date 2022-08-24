@@ -2,8 +2,8 @@
 function spotifyAPI() {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQBmAOpdIacKvaFDqvx-DiI5KotemeG_yC00HtdW_Xi34WoUZFv8cdkSdkXWKjWZP8ETJNPYiFCBuUgPIoRg4opmJ6zERwGBxVYnBb6B5hczW4rbcDf033m06sA_2Qd1X4g7u7M9YAOgjKJUS2VRFuDRVVCEYhlpo-GW25Lc_HzGF9xb0nNvp_pyBFQ27A52mq6UZgs9';
-    xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=1484811043508");
+    const token = 'BQBkfClrar8Fht-G8nsDHXle3b1KTQGNkYVSMQFklK0OUh_mO8Zi0abCu8pPVgDOuet4PnYIWGijp1PQRkIRHgq3863KCXMlWofo7TnA_rOPryv8oSIMtR3XKBNofOh60nc8KjmoR1e0UnlAPPEwgJcJ3z7lsLLKoWP7TXg_ddgUcFy1yqOqhDxuo05k-ouREkvO_N2t';
+    xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=500");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
 
@@ -16,9 +16,6 @@ function spotifyAPI() {
 
         songname = songname + JSONified.items[0].track.name;
         songartist = songartist + JSONified.items[0].track.artists[0].name;
-
-        // console.log(songname);
-        // console.log(songartist);
 
 
         const song_name = document.getElementById('song_title');
@@ -34,28 +31,6 @@ function spotifyAPI() {
 }
 
 
-
-// post request to get token
-
-// const clientId = '';
-// const clientSecret = '';
-
-// const _getToken = async () => {
-//     const result = await fetch('https://accounts.spotify.com/api/token', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': "application/x-www-form-urlencoded",
-//             'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret) 
-//         },
-//         body: 'grant_type=client_credentials'
-//     });
-
-//     const data = await result.json();
-//     return data.access_token;
-// };
-
-
-// var token = _getToken.access_token;
 
 function goTo(site){
     if (site === "github"){
@@ -103,6 +78,10 @@ function goTo(site){
         
     }
 
+    if (site==="git-boardem"){
+        window.open("https://github.com/kristiantud/boardem", "_blank").focus();
+    }
+
     if (site==="git-hanabi"){
         window.open("https://git.cs.usask.ca/370-19/h1",'_blank').focus();
     }
@@ -111,8 +90,10 @@ function goTo(site){
         window.open("https://git.cs.usask.ca/krt916/assignment4_350/",'_blank').focus();
     }
 
-    
+    if (site==="spotify"){
+        window.open("https://open.spotify.com/user/r5da6znbljz78gi5s9m5a8age?si=4137b0c0bf0a49ed", "_blank").focus();
+    }
 
-    
-    
 }
+
+

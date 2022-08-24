@@ -56,6 +56,8 @@ body,html{
     padding: 32px;
     transition: var(--transition-delay);
     font-family: 'Jost', sans-serif;
+
+
     font-size: 20px;
 }
 
@@ -159,12 +161,14 @@ body,html{
 #spotify-album-cover{
     height: 200px;
     width: 200px;
-    /* border-radius: 32px; */
+    border-radius: 12px;
+    box-shadow: 7px 7px 5px  #423d3d;
 }
 
 .spotify-album-cover-container{
     height: 205px;
     width: 246px;
+    
     
 }
 
@@ -238,6 +242,10 @@ body,html{
   #projects{
     grid-row: 3/5;
     
+  }
+
+  #projects hr{
+    margin: 13px 0;
   }
 
  
@@ -325,4 +333,36 @@ body,html{
     grid-column: 4;
     grid-row: 4/5;
     
+ }
+
+ #discord-logo{
+  color: rgb(40, 28, 109);
+ }
+
+ #todos-logo{
+  color: rgb(11, 100, 11);
+ }
+
+ #spotify-site{
+  background-color: #2ad45e;
+  position: relative;
+  text-align: center;
+ }
+
+ #spotify-site:hover{
+  cursor: pointer;
+ }
+
+ #spotify-link-container{
+  display: block;
+  height: 100%;
+  width: 100%;
+  
+ }
+
+ #spotify-icon{
+  padding-top: 0;
+  margin-top: 30px;
+  height: 125px;
+  width: 125px;
  }

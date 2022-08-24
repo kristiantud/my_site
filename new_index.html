@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
-
+    
 
     <link rel="stylesheet" href="new_style.css">
 
@@ -36,7 +36,7 @@
 </head>
 <body onload="spotifyAPI()">
     
-    
+    <!-- <button onclick="requestAuthorization()">click</button> -->
     <div class="site-wrapper">
         <div class="navbar">
             <span id="navbar-span">ktud</span>
@@ -106,22 +106,27 @@
                 <div class="stat">
                     <span class="stat_title">Workouts</span>
                     <br>
-                    <span class="stat_value">67</span>
+                    <span class="stat_value">70</span>
                 </div>
                 <div class="stat">
                     <span class="stat_title">Total Distance</span>
                     <br>
-                    <span class="stat_value">842.76km</span>
+                    <span class="stat_value">882.59km</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_title">Calories Burned</span>
+                    <br>
+                    <span class="stat_value">22,327</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_title">Average Speed</span>
+                    <br>
+                    <span class="stat_value">17.4 km/h</span>
                 </div>
                 <div class="stat">
                     <span class="stat_title">Longest Distance</span>
                     <br>
                     <span class="stat_value">84.2km</span>
-                </div>
-                <div class="stat">
-                    <span class="stat_title">Calories Burned</span>
-                    <br>
-                    <span class="stat_value">21,332</span>
                 </div>
             </div>
 
@@ -160,7 +165,7 @@
                 </div>
                 <hr>
                 <div class="project_item" onclick="goTo('git-todos')">
-                    <ion-icon name="list-outline" class="project_img"></ion-icon>
+                    <ion-icon name="list-outline" class="project_img" id="todos-logo"></ion-icon>
                     <span class="project-item-span">Todos (CRUD)</span>
                 </div>
                 <hr>
@@ -171,7 +176,7 @@
                 <hr>
   
                 <div class="project_item" onclick="goTo('discord-bot-warzone')">
-                    <ion-icon name="logo-discord" class="project_img"></ion-icon>
+                    <ion-icon name="logo-discord" class="project_img" id="discord-logo"></ion-icon>
                     <span class="project-item-span">Warzone Stats Bot (Node.js)</span>
                 </div>
                 <hr>
@@ -183,6 +188,11 @@
                 <div class="project_item" onclick="goTo('rock-paper-scissors')">
                     <ion-icon name="hand-right-outline" class="project_img" id="project_img_rps"></ion-icon>
                     <span class="project-item-span">Rock, Paper, Scissors (Java Sockets)</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('git-boardem')">
+                    <img src="./images/boardem.jpg" class="project_img">
+                    <span class="project-item-span">boardem.co</span>
                 </div>
                 
 
@@ -222,8 +232,13 @@
                     <img src="./images/pfp1.png" class="project_img">
                     <span class="project-item-span">kristiantud.me (v1)</span>
                 </div>
-                
+            </div>
 
+            <div class="_card" id="spotify-site" onclick="goTo('spotify')">
+                <a href="#" id="spotify-link-container">
+                    <img src="./images/spotify-logo.png" class="link-card-icon" id="spotify-icon">
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
             </div>
             
         </div>
