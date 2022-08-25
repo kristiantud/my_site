@@ -2,7 +2,7 @@
 function spotifyAPI() {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQBkfClrar8Fht-G8nsDHXle3b1KTQGNkYVSMQFklK0OUh_mO8Zi0abCu8pPVgDOuet4PnYIWGijp1PQRkIRHgq3863KCXMlWofo7TnA_rOPryv8oSIMtR3XKBNofOh60nc8KjmoR1e0UnlAPPEwgJcJ3z7lsLLKoWP7TXg_ddgUcFy1yqOqhDxuo05k-ouREkvO_N2t';
+    const token = 'BQAB7vtmYKkST27Xv-JKwzT-KSESRHfbNjDwNxZHOGYbvpkEpArJJn6kstZHNU3UlW9NNI6BzdKPgSV4uOcuxpsm5olQoRhLkNsRWNsc97s0scZJPKQUzTxk0okE2p2gpUtPF_1waKGJrIdfS6CWJOHjv_XIlzKSUT7-tK43lHRCXAXCmo8pw4INeLLMwgCcYWbcnaX8';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=500");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
@@ -94,6 +94,27 @@ function goTo(site){
         window.open("https://open.spotify.com/user/r5da6znbljz78gi5s9m5a8age?si=4137b0c0bf0a49ed", "_blank").focus();
     }
 
+    if (site==="warzone-stats"){
+        window.open("https://kristiantud.github.io/ataraxia/tournaments.html", "_blank").focus();
+    }
+
 }
 
 
+
+const options = {
+    bottom: '64px', // default: '32px'
+    right: 'unset', // default: '32px'
+    left: '32px', // default: 'unset'
+    time: '0.5s', // default: '0.3s'
+    mixColor: 'darkgray', // default: '#fff'
+    backgroundColor: '#fff',  // default: '#fff'
+    buttonColorDark: '#100f2c',  // default: '#100f2c'
+    buttonColorLight: '#fff', // default: '#fff'
+    saveInCookies: false, // default: true,
+    label: '🌓', // default: ''
+    autoMatchOsTheme: true // default: true
+  }
+  
+  const darkmode = new Darkmode(options);
+  darkmode.showWidget();

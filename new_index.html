@@ -194,26 +194,7 @@
                     <img src="./images/boardem.jpg" class="project_img">
                     <span class="project-item-span">boardem.co</span>
                 </div>
-                
-
-                
-                
-
-                
-            </div>
-
-            <div class="_card" id="github" onclick="goTo('github')">
-                <a href="#" id="github-link-container">
-                    <ion-icon name="logo-github" id="github-icon" class="link-card-icon"></ion-icon>
-                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
-                </a>
-            </div>
-
-            <div class="_card" id="instagram" onclick="goTo('instagram')">
-                <a href="#" id="instagram-link-container">
-                    <ion-icon name="logo-instagram" id="instagram-icon" class="link-card-icon"></ion-icon>
-                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
-                </a>
+                              
             </div>
 
             <div class="_card" id="design-projects">
@@ -234,9 +215,78 @@
                 </div>
             </div>
 
+            
+
+            <div class="_card" id="apollo-pictures">
+                <div id="apolloCarousel" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/1.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        
+                        <div class="carousel-item active">
+                            <img src="/images/carousel/apollo/4.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/5.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/6.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/7.JPG" class="d-block w-100" alt="...">
+                        </div>
+            
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#apolloCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#apolloCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+
+            <div class="_card" id="github" onclick="goTo('github')">
+                <a href="#" id="github-link-container">
+                    <ion-icon name="logo-github" id="github-icon" class="link-card-icon"></ion-icon>
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+           
+
             <div class="_card" id="spotify-site" onclick="goTo('spotify')">
                 <a href="#" id="spotify-link-container">
                     <img src="./images/spotify-logo.png" class="link-card-icon" id="spotify-icon">
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+
+            <div class="_card" id="instagram" onclick="goTo('instagram')">
+                <a href="#" id="instagram-link-container">
+                    <ion-icon name="logo-instagram" id="instagram-icon" class="link-card-icon"></ion-icon>
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+
+            <div class="_card" id="warzone" onclick="goTo('warzone-stats')">
+                <a href="#" id="warzone-link-container">
+                    <div class="wz-img-container">
+                        <div class="wz-img-opacity"></div>
+                        <img src="./images/wz.jpg" id="warzone-img" alt="">
+                    </div>
+                    <span id="warzone-span">Warzone Tournaments</span>
                     <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
                 </a>
             </div>
@@ -246,11 +296,20 @@
             
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    
+    <!-- <script>
+    function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
+    </script> -->
     
 </body>
 </html>

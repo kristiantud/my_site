@@ -51,8 +51,9 @@ body,html{
 
 ._card{
     border-radius: 32px;
-    background-color: var(--card-color);
-    box-shadow: 0.2rem 0.4rem 12rem rgba(9, 18, 37, 0.267);
+    /* background-color: var(--card-color); */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.2rem 0.4rem 12rem rgba(9, 18, 37, 0.178);
     padding: 32px;
     transition: var(--transition-delay);
     font-family: 'Jost', sans-serif;
@@ -76,11 +77,12 @@ body,html{
 #intro_rest{
     display: inline-block;
     padding-top: 15px;
+    font-size: 18px;
 }
 
 #memoji{
-    height: 150px;
-    width: 150px;
+    height: 170px;
+    width: 170px;
 }
 
 #freelancespan{
@@ -305,6 +307,7 @@ body,html{
     position: absolute;
     right: 15px;
     bottom: 15px;
+    z-index: 2;
   }
 
   #instagram{
@@ -330,7 +333,7 @@ body,html{
 
 
  #design-projects{
-    grid-column: 4;
+    grid-column: 2;
     grid-row: 4/5;
     
  }
@@ -362,7 +365,60 @@ body,html{
 
  #spotify-icon{
   padding-top: 0;
-  margin-top: 30px;
-  height: 125px;
-  width: 125px;
+  margin-top: 40px;
+  height: 105px;
+  width: 105px;
+ }
+
+
+ #apollo-pictures{
+  padding: 0;
+ }
+
+ #apollo-pictures img{
+  border-radius: 32px;
+ }
+
+#warzone{
+  padding: 0;
+  grid-column: 3/5;
+  position: relative;
+}
+
+#warzone-img{
+  border-radius: 32px;
+  height: 266px;
+  width: 556px;
+  position: absolute;
+  z-index: 1;
+}
+
+#warzone:hover{
+  cursor: pointer;
+ }
+
+.wz-img-opacity{
+  position: absolute;
+  height: 266px;
+  width: 556px;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 32px;
+ }
+
+ #warzone-span{
+  font-family: 'Fjalla One', sans-serif;
+  z-index: 2;
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+ }
+
+ .darkmode--activated ._card{
+  background-color: #2c2c2e;
+  color: rgb(209, 209, 209);
  }
