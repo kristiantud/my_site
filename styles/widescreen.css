@@ -406,14 +406,13 @@ body,html{
 
 #warzone{
   padding: 0;
-  grid-column: 3/5;
+  grid-column: 4;
   position: relative;
 }
 
 #warzone-img{
   border-radius: 32px;
   height: 266px;
-  width: 556px;
   position: absolute;
   z-index: 1;
 }
@@ -425,7 +424,7 @@ body,html{
 .wz-img-opacity{
   position: absolute;
   height: 266px;
-  width: 556px;
+  width: 100%;
   z-index: 2;
   background-color: rgba(0,0,0,0.5);
   border-radius: 32px;
@@ -435,12 +434,12 @@ body,html{
   font-family: 'Fjalla One', sans-serif;
   z-index: 2;
   position: absolute;
-  font-size: 40px;
+  font-size: 20px;
   color: white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 175px;
  }
 
  .darkmode--activated ._card{
@@ -514,4 +513,15 @@ body,html{
 
 .mapboxgl-ctrl-bottom-left , .mapboxgl-ctrl-bottom-right{
   display: none;
+}
+
+#tiktok{
+  text-align: center;
+  background-color: #0a0a0a; 
+  position: relative;
+  /* padding: 0; */
+}
+
+#tiktok:hover{
+  cursor: pointer;
 }

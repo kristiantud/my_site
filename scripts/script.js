@@ -98,6 +98,10 @@ function goTo(site){
         window.open("https://kristiantud.github.io/ataraxia/tournaments.html", "_blank").focus();
     }
 
+    if (site==="tiktok"){
+        window.open("https://tiktok.com/@kristiantud").focus();
+    }
+
 }
 
 
