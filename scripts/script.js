@@ -120,11 +120,12 @@ const options = {
 //   darkmode.showWidget();
 
 
+let activated = false;
 loadMap("light");
 
 // for dark-mode knob
 const darkModeKnob = document.querySelector('.dark-toggle-switch-container');
-let activated = false;
+
 darkModeKnob.addEventListener('click', () => {
     if (activated == false){
         activated = true;

@@ -6,7 +6,9 @@ body,html{
 
 }
 
-
+.mapboxgl-canvas{
+  border-radius: 32px;
+}
 
 .site-wrapper{
     height: 100vh;
@@ -552,3 +554,4 @@ body,html{
 .mapboxgl-ctrl-bottom-left , .mapboxgl-ctrl-bottom-right{
   display: none;
 }
+
