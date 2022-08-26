@@ -2,7 +2,7 @@
 function spotifyAPI() {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQAB7vtmYKkST27Xv-JKwzT-KSESRHfbNjDwNxZHOGYbvpkEpArJJn6kstZHNU3UlW9NNI6BzdKPgSV4uOcuxpsm5olQoRhLkNsRWNsc97s0scZJPKQUzTxk0okE2p2gpUtPF_1waKGJrIdfS6CWJOHjv_XIlzKSUT7-tK43lHRCXAXCmo8pw4INeLLMwgCcYWbcnaX8';
+    const token = 'BQDvnlMogxheqV4t9Bj6H0NJburDTsnOjfuFajWIOufm4CRtlbTocRTa9OznyggkUNCWuygGGFe9577RTuiqayZTqL1TWpgKNsYUSM07eCUdEbR7id50eDoiSqta2R5r35-o010sN59AKBHSV3Zu-TsZkODKrnzF8-bDuCgJD1rEjXQL0vurVfcBPMR3NH8MD04Oi3g7';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=500");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
@@ -117,4 +117,20 @@ const options = {
   }
   
   const darkmode = new Darkmode(options);
-  darkmode.showWidget();
+//   darkmode.showWidget();
+
+
+
+// for dark-mode knob
+const darkModeKnob = document.querySelector('.dark-toggle-switch-container');
+let activated = false;
+darkModeKnob.addEventListener('click', () => {
+    if (activated == false){
+        activated = true;
+        darkModeKnob.classList.add('activated');
+    } else {
+        activated = false;
+        darkModeKnob.classList.remove('activated');
+    }
+    
+});

@@ -2,6 +2,7 @@ body,html{
     padding: 0;
     margin: 0;
     font-family: 'Jost', sans-serif;
+    
 
 }
 
@@ -45,6 +46,7 @@ body,html{
     margin-bottom: 80px;
     justify-content: start;
     padding-bottom: 50px;
+
 }
 
 
@@ -53,13 +55,15 @@ body,html{
     border-radius: 32px;
     /* background-color: var(--card-color); */
     background-color: rgb(255, 255, 255);
-    box-shadow: 0.2rem 0.4rem 12rem rgba(9, 18, 37, 0.178);
+    box-shadow: 0.2rem 0.4rem 12rem rgba(9, 18, 37, 0.247);
     padding: 32px;
     transition: var(--transition-delay);
     font-family: 'Jost', sans-serif;
 
 
     font-size: 20px;
+
+    transition: 0.2s ease-in;
 }
 
 /* .card-button{
@@ -164,7 +168,7 @@ body,html{
     height: 200px;
     width: 200px;
     border-radius: 12px;
-    box-shadow: 7px 7px 5px  #423d3d;
+    box-shadow: 7px 7px 10px  #423d3d;
 }
 
 .spotify-album-cover-container{
@@ -419,6 +423,62 @@ body,html{
  }
 
  .darkmode--activated ._card{
+  transition: 0.2s ease-in;
   background-color: #2c2c2e;
   color: rgb(209, 209, 209);
  }
+
+
+ .darkmode--activated #spotify-album-cover{
+    box-shadow: 7px 7px 10px  #0f0f0f;
+ }
+
+ .dark-toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 48px;
+  height: 22px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  top: -2px;
+}
+
+.dark-toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 25%);
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+
+
+.dark-toggle-switch:before, .dark-toggle-switch:after {
+  content: "";
+}
+
+
+
+.dark-toggle-switch-container.activated .dark-toggle-switch:before{
+  left: 30px;
+}
+
+
+/* .dark-toggle-switch:before{
+  content: "☀️";
+}
+
+.dark-toggle-switch:after{
+  content: "🌑";
+} */
+
+/* input[type="checkbox"]{
+  box-sizing: border-box;
+  padding: 0;
+} */
