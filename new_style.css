@@ -6,6 +6,8 @@ body,html{
 
 }
 
+
+
 .site-wrapper{
     height: 100vh;
     background-color: #ffffff;
@@ -127,7 +129,10 @@ body,html{
 #map{
     grid-column: 3/5;
     grid-row: 1/2;
+    padding: 0;
 }
+
+.map { position: absolute; top: 0; bottom: 0; width: 556px; height: 266px; border-radius: 32px; }
 
 #pictures{
     padding: 0;
