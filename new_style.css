@@ -27,14 +27,36 @@ body,html{
 #navbar-span{
     font-size: 40px;
     font-family: 'Yeseva One', cursive;
-    background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 );
+    color: black;
+    /* background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
    letter-spacing: -1px;
    line-height: 95px;
    display: table;
     margin: 0 auto;
    
+}
+
+#navbar-button{
+  display: flex;
+  padding: 4px;
+  background: linear-gradient(45deg, rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90%);
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+
+#navbar-button a{
+  font-family: 'Jost', sans-serif;
+  text-decoration: none;
+  border-radius: 100px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 600;
+  background: white;
+  transition: var(--transition-delay);
+  padding: 8px 16px;
+
 }
 
 .grid{
@@ -89,6 +111,7 @@ body,html{
 #memoji{
     height: 170px;
     width: 170px;
+    margin-bottom:15px;
 }
 
 #freelancespan{
@@ -123,7 +146,7 @@ body,html{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
    letter-spacing: -1px;
-   /* line-height: 75px; */
+   line-height: 75px;
 }
 
 #map{
@@ -433,9 +456,17 @@ body,html{
   color: rgb(209, 209, 209);
  }
 
+ .darkmode--activated #navbar-span{
+  color: rgb(223, 223, 223);
+ }
 
  .darkmode--activated #spotify-album-cover{
     box-shadow: 7px 7px 10px  #0f0f0f;
+ }
+
+ .darkmode--activated #navbar-button a{
+  color: rgb(235, 233, 233);
+  background-color: #3a3a3a;
  }
 
  .dark-toggle-switch {
@@ -487,3 +518,7 @@ body,html{
   box-sizing: border-box;
   padding: 0;
 } */
+
+.mapboxgl-ctrl-bottom-left , .mapboxgl-ctrl-bottom-right{
+  display: none;
+}

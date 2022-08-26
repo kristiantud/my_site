@@ -120,6 +120,7 @@ const options = {
 //   darkmode.showWidget();
 
 
+loadMap("light");
 
 // for dark-mode knob
 const darkModeKnob = document.querySelector('.dark-toggle-switch-container');
@@ -145,6 +146,26 @@ function loadMap(theme){
     } else {
         style = style + "dark-v10";
     }
+
+
+    const geojson = {
+        'type': 'FeatureCollection',
+        'features': [
+        {
+            'type': 'Feature',
+            'properties': {
+                'message': 'Foo',
+                'iconSize': [60, 60]
+        },
+            'geometry': {
+            'type': 'Point',
+            'coordinates': [-106.648713, 52.130657]
+            }
+        }]
+    };
+    
+
+
     const map = new mapboxgl.Map({
         container: 'lightmap', // container ID
         style: `mapbox://styles/mapbox/${style}`, // style URL
@@ -152,4 +173,29 @@ function loadMap(theme){
         zoom: 12  // starting zoom
     });
 
+    // Add markers to the map.
+for (const marker of geojson.features) {
+    // Create a DOM element for each marker.
+    const el = document.createElement('div');
+    el.className = 'marker';
+    el.style.backgroundImage = `url(./images/map-memoji.png)`;
+    el.style.width = `120px`;
+    el.style.height = `120px`;
+    el.style.backgroundSize = '100%';
+     
+    el.addEventListener('click', () => {
+    window.alert(marker.properties.message);
+    });
+     
+    // Add markers to the map.
+    new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
+    }
+
+    
+            
+
+
+   
 }

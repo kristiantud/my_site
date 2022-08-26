@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- My first site live. Dedicated to my loves - Arielle and Apollo -->
+    <title>Kristian Tud</title>
+    <link rel="icon" href="images/pfp1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/020e1867a2.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    
+
+    
+</head>
+<body>
+    
+    
+    <div class="site-wrapper">
+        <div class="left-side">
+            <div class="font-wrapper" >
+                <span id="size-span">Font Size:</span>
+                <div id="close" onclick="closeFont()">close</div>
+                <div class="font-size">
+                    <button id="small-font" onclick="changeFont('small')">S</button>
+                    <button id="big-font" onclick="changeFont('large')">L</button>
+                </div>
+                
+            </div>
+            <div class="main-content">
+                <img id="my-picture" src="images/pfp1.png">
+                <span id="my-name">KRISTIAN TUD</span>
+               <span id="my-title">Full-Stack Web Developer</span>
+                <br>
+                <span id="my-title">Software Engineer</span>
+            </div>
+    
+            <div class="contact-content">  
+                <i class="fas fa-envelope "></i>krt916.22@gmail.com
+                <br>
+                <i class="fas fa-map-marker-alt "></i>Saskatchewan  
+                <br>
+                <i class="far fa-id-card"></i>INTJ
+            </div>
+
+            <hr id="hr-left">
+
+            <div class="about-content">
+                <span id="my-about">
+                    My name is Kristian Tud. My family came to Canada from the Philippines when I was 12, and I am grateful to be here. One of my biggest goals is to 
+                    be the best web developer/software engineer that I can possibly be. My hobbies include Basketball, Weightlifting, Painting, Guitar, Biking, First-Person Shooters, and Hiking.
+                    Aside from Computer Science, I also have an interest in Philosophy and Psychology. I am extremely driven when trying to achieve a goal. I try to be good at everything I do.
+                </span>
+            </div>
+
+
+            
+        
+
+        </div>
+        <div class="right-side">
+            <!-- <div class="right-side-content-wrapper">
+
+            </div> -->
+            <div class="right-side-leftcontainer">
+                <div class="right-content" id="education">
+                    <div class="title-holder">
+                        <span id="right-title">Skills</span>
+                        <hr id="hr-right">
+                    </div>
+
+                    <div class="content-holder">
+                        <div class="element">
+                            <span id="content-title" name="content-title">Proficient understanding of object-oriented concepts</span>
+                            <br>
+                            <span id="content-subtitle" name="content-subtitle">Worked on multiple projects using Java</span>
+                        </div>
+                        <div class="element">
+                            <span id="content-title" name="content-title">Adequate understanding of both front-end, back-end processes</span>
+                            <br>
+                            <span id="content-subtitle" name="content-subtitle">Worked on projects involving server-side and client-side interactions</span>
+                        </div>
+                        <div class="element">
+                            <span id="content-title" name="content-title">Sufficient knowledge of software engineering concepts</span>
+                            <br>
+                            <span id="content-subtitle" name="content-subtitle">Software Change process, Software Design patterns, Software Development (Agile, Waterfall)</span>
+                        </div>
+                        <div class="element">
+                            <span id="content-title" name="content-title">Ample experience with the use of version control systems, and the use of containers</span>
+                            <br>
+                            <span id="content-subtitle" name="content-subtitle">Worked with Git, Docker</span>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+    
+                <div class="right-content" id="skills">
+                    <div class="title-holder">
+                        <span id="right-title">Languages</span>
+                        <hr id="hr-right">
+                    </div>
+    
+                    <div class="element">
+                        <span id="content-title" name="content-title">Web Development</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Javascript, CSS3, HTML5, jQuery</span>
+                    </div>
+
+                    <div class="element">
+                        <span id="content-title" name="content-title">Database</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">mySQL, MongoDB</span>
+                    </div>
+
+                    <div class="element">
+                        <span id="content-title" name="content-title">Object-Oriented</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Java, Python</span>
+                    </div>
+
+                    <div class="element">
+                        <span id="content-title" name="content-title">Other</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Bash, TXL, Prolog, C</span>
+                    </div>
+
+                    
+
+        
+                </div>
+            </div>
+
+            <div class="right-side-rightcontainer">
+                <div class="right-content" id="experience">
+                    <div class="title-holder">
+                        <span id="right-title">Experience</span>
+                        <hr id="hr-right">
+                    </div>
+                    <div class="element">
+                        <span id="content-title" name="content-title">ComplidoCars.com</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Designed and developed a responsive website for the client.</span>
+                    </div>
+                    <div class="element">
+                        <span id="content-title" name="content-title">boardem.co</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Worked with the client to design a website that they are satisfied with, and built the website using HTML5, Javascript, CSS3.</span>
+                    </div>
+                    <div class="element">
+                        <span id="content-title" name="content-title">Web Development (CMPT350)</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Created a to-do list/calendar that allows the user to add and remove tasks on their chosen dates. Users could also create 
+                            their own accounts to save their tasks. Used HTML5, Node.js, jQuery, CSS3, MySQL to store username and passwords and calendar tasks, Bootstrap for most of the front-end development.
+                        </span>
+                    </div>
+                    <div class="element">
+                        <span id="content-title" name="content-title">Software Engineering (CMPT370)</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Worked with a group to create a client-side software based on the game 'Hanabi'. I was in charge of creating the 
+                            part of the software that is responsible for sending and receiving messages from the game server. I also helped design the AI that helps the 
+                            user find the best move.
+                        </span>
+                    </div>
+                    <div class="element">
+                        <span id="content-title" name="content-title">Human-Computer Interaction (CMPT481)</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Worked with a group to re-design the registration process of the PAWS site for a project.</span>
+                    </div>
+    
+                    <div class="element">
+                        <span id="content-title" name="content-title">COD: Warzone Stats Discord Bot</span>
+                        <br>
+                        <span id="content-subtitle" name="content-subtitle">Created a discord bot using Node.js that allows user to retreive their last n stats. </span>
+                    </div>
+                </div>
+            </div> 
+            
+        </div>
+
+    </div>
+
+    <script>
+        function changeFont(val){
+            var titles = document.getElementsByName("content-title");
+            var subtitles = document.getElementsByName("content-subtitle");
+            if (val == 'small'){
+                document.getElementById("my-about").style.fontSize = '4vw';
+                for (var i = 0; i < titles.length; i++){
+                    titles[i].style.fontSize = '5.1vw';
+                    subtitles[i].style.fontSize = '4vw';
+                }
+            } else if (val == 'large'){
+                document.getElementById("my-about").style.fontSize = '4.5vw';
+                for (var i = 0; i < titles.length; i++){
+                    subtitles[i].style.fontSize = '4.8vw';
+                }
+                
+            }
+        }
+
+        $('.font-wrapper').css('visibility','hidden');
+
+        // function closeFont(){
+        //     $('.font-wrapper').css('visibility','hidden');
+        // }
+
+        // show the font-size thing when the site loads
+        // var sWidth = $(window).width();
+        // if (sWidth < 708){
+        //     // make the font-resize visible
+        //     $('.font-wrapper').css('visibility','visible');
+        // } else {
+        //     $('.font-wrapper').css('visibility','hidden');
+        // }
+
+        
+    </script>
+</body>
+</html>

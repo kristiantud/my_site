@@ -8,228 +8,320 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    
+    
+
+    <link rel="stylesheet" href="new_style.css">
 
     <script src="https://kit.fontawesome.com/020e1867a2.js" crossorigin="anonymous"></script>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
     
     
 
+    <!-- mapbox -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
     
 </head>
-<body>
+<body onload="spotifyAPI()">
     
-    
+    <!-- <button onclick="requestAuthorization()">click</button> -->
     <div class="site-wrapper">
-        <div class="left-side">
-            <div class="font-wrapper" >
-                <span id="size-span">Font Size:</span>
-                <div id="close" onclick="closeFont()">close</div>
-                <div class="font-size">
-                    <button id="small-font" onclick="changeFont('small')">S</button>
-                    <button id="big-font" onclick="changeFont('large')">L</button>
+        <div class="navbar">
+            <div class="dark-toggle-switch-container">
+                <div class="dark-toggle-switch" onclick="darkmode.toggle()">
                 </div>
-                
             </div>
-            <div class="main-content">
-                <img id="my-picture" src="images/pfp1.png">
-                <span id="my-name">KRISTIAN TUD</span>
-               <span id="my-title">Full-Stack Web Developer</span>
-                <br>
-                <span id="my-title">Software Engineer</span>
+            <span id="navbar-span">ktud</span>
+            <div id="navbar-button">
+                <a href="">Contact</a>
             </div>
-    
-            <div class="contact-content">  
-                <i class="fas fa-envelope "></i>krt916.22@gmail.com
+        </div>
+        <div class="grid">
+            <div class="_card" id="intro">
+                <img src="./images/memoji.png" id="memoji">
                 <br>
-                <i class="fas fa-map-marker-alt "></i>Saskatchewan  
-                <br>
-                <i class="far fa-id-card"></i>INTJ
-            </div>
-
-            <hr id="hr-left">
-
-            <div class="about-content">
-                <span id="my-about">
-                    My name is Kristian Tud. My family came to Canada from the Philippines when I was 12, and I am grateful to be here. One of my biggest goals is to 
-                    be the best web developer/software engineer that I can possibly be. My hobbies include Basketball, Weightlifting, Painting, Guitar, Biking, First-Person Shooters, and Hiking.
-                    Aside from Computer Science, I also have an interest in Philosophy and Psychology. I am extremely driven when trying to achieve a goal. I try to be good at everything I do.
+                <span id="intro_span">
+                    <span id="intro_intro">Hello! My name is</span><br><span id="intro_name">Kristian Tud</span><br>
+                    <span id="intro_rest">
+                        I am a Computer Science graduate from USASK. I aspire to become a Full-Stack Website Developer/Software Engineer. I am also very interested in Philosophy and Psychology.  Nice to meet you!
+                    </span>
                 </span>
+                <!-- <br> -->
+                <!-- <button class="card-button">Contact</button> -->
+            </div>
+            <div class="_card" id="map">
+                <div class="map" id="lightmap"></div>
+            </div>
+            <div class="_card" id="pictures">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/carousel/3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="/images/carousel/6.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="./images/carousel/4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/carousel/2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/carousel/5.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/carousel/1.jpg" class="d-block w-100" alt="...">
+                        </div>
+            
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
 
-
-            
-        
-
-        </div>
-        <div class="right-side">
-            <!-- <div class="right-side-content-wrapper">
-
-            </div> -->
-            <div class="right-side-leftcontainer">
-                <div class="right-content" id="education">
-                    <div class="title-holder">
-                        <span id="right-title">Skills</span>
-                        <hr id="hr-right">
-                    </div>
-
-                    <div class="content-holder">
-                        <div class="element">
-                            <span id="content-title" name="content-title">Proficient understanding of object-oriented concepts</span>
-                            <br>
-                            <span id="content-subtitle" name="content-subtitle">Worked on multiple projects using Java</span>
-                        </div>
-                        <div class="element">
-                            <span id="content-title" name="content-title">Adequate understanding of both front-end, back-end processes</span>
-                            <br>
-                            <span id="content-subtitle" name="content-subtitle">Worked on projects involving server-side and client-side interactions</span>
-                        </div>
-                        <div class="element">
-                            <span id="content-title" name="content-title">Sufficient knowledge of software engineering concepts</span>
-                            <br>
-                            <span id="content-subtitle" name="content-subtitle">Software Change process, Software Design patterns, Software Development (Agile, Waterfall)</span>
-                        </div>
-                        <div class="element">
-                            <span id="content-title" name="content-title">Ample experience with the use of version control systems, and the use of containers</span>
-                            <br>
-                            <span id="content-subtitle" name="content-subtitle">Worked with Git, Docker</span>
-                        </div>
-                        
-                        
-                    </div>
-                    
-                    
+            <div class="_card" id="bikestats">
+                <span class="card-title" id="bikestats">Biking Dashboard</span>
+                <div class="stat">
+                    <span class="stat_title">Workouts</span>
+                    <br>
+                    <span class="stat_value">70</span>
                 </div>
-    
-                <div class="right-content" id="skills">
-                    <div class="title-holder">
-                        <span id="right-title">Languages</span>
-                        <hr id="hr-right">
-                    </div>
-    
-                    <div class="element">
-                        <span id="content-title" name="content-title">Web Development</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Javascript, CSS3, HTML5, jQuery</span>
-                    </div>
-
-                    <div class="element">
-                        <span id="content-title" name="content-title">Database</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">mySQL, MongoDB</span>
-                    </div>
-
-                    <div class="element">
-                        <span id="content-title" name="content-title">Object-Oriented</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Java, Python</span>
-                    </div>
-
-                    <div class="element">
-                        <span id="content-title" name="content-title">Other</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Bash, TXL, Prolog, C</span>
-                    </div>
-
-                    
-
-        
+                <div class="stat">
+                    <span class="stat_title">Total Distance</span>
+                    <br>
+                    <span class="stat_value">882.59km</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_title">Calories Burned</span>
+                    <br>
+                    <span class="stat_value">22,327</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_title">Average Speed</span>
+                    <br>
+                    <span class="stat_value">17.4 km/h</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_title">Longest Distance</span>
+                    <br>
+                    <span class="stat_value">84.2km</span>
                 </div>
             </div>
 
-            <div class="right-side-rightcontainer">
-                <div class="right-content" id="experience">
-                    <div class="title-holder">
-                        <span id="right-title">Experience</span>
-                        <hr id="hr-right">
-                    </div>
-                    <div class="element">
-                        <span id="content-title" name="content-title">ComplidoCars.com</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Designed and developed a responsive website for the client.</span>
-                    </div>
-                    <div class="element">
-                        <span id="content-title" name="content-title">boardem.co</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Worked with the client to design a website that they are satisfied with, and built the website using HTML5, Javascript, CSS3.</span>
-                    </div>
-                    <div class="element">
-                        <span id="content-title" name="content-title">Web Development (CMPT350)</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Created a to-do list/calendar that allows the user to add and remove tasks on their chosen dates. Users could also create 
-                            their own accounts to save their tasks. Used HTML5, Node.js, jQuery, CSS3, MySQL to store username and passwords and calendar tasks, Bootstrap for most of the front-end development.
-                        </span>
-                    </div>
-                    <div class="element">
-                        <span id="content-title" name="content-title">Software Engineering (CMPT370)</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Worked with a group to create a client-side software based on the game 'Hanabi'. I was in charge of creating the 
-                            part of the software that is responsible for sending and receiving messages from the game server. I also helped design the AI that helps the 
-                            user find the best move.
-                        </span>
-                    </div>
-                    <div class="element">
-                        <span id="content-title" name="content-title">Human-Computer Interaction (CMPT481)</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Worked with a group to re-design the registration process of the PAWS site for a project.</span>
-                    </div>
-    
-                    <div class="element">
-                        <span id="content-title" name="content-title">COD: Warzone Stats Discord Bot</span>
-                        <br>
-                        <span id="content-subtitle" name="content-subtitle">Created a discord bot using Node.js that allows user to retreive their last n stats. </span>
-                    </div>
+            <div class="_card" id="spotify">
+                <!-- <img id="spotify-album-cover"></img> -->
+                <div class="spotify-album-cover-container">
+                    <img alt="spotify album cover" id="spotify-album-cover">
                 </div>
-            </div> 
+                <div class="spotify-info-container">
+                    <img src="/images/spotify.png" id="spotify-logo">
+                    <div class="playing-status-container">
+                        <div class="animation-container">
+                            <div class="spotify-animation-1"></div>
+                            <div class="spotify-animation-2"></div>
+                            <div class="spotify-animation-3"></div>
+                          </div>
+                        <span style="color: #2ad45e; font-weight: bold; font-size: 17px;">Last Played</span>
+                    </div>
+                    
+                    <span id="song_title">Song Title</span>
+                    <br>
+                    <span id="song_artist">Artist</span>
+                </div>
+            </div>
+
+            <div class="_card" id="projects">
+                <span class="card-title" id="freelancespan">Projects</span>
+                <div class="project_item" onclick="goTo('complido-cars')">
+                    <img src="./images/cc.jpg" class="project_img">
+                    <span class="project-item-span">ComplidoCars.com</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('git-hanabi')">
+                    <img src="./images/hanabi.png" class="project_img">
+                    <span class="project-item-span">Hanabi</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('git-todos')">
+                    <ion-icon name="list-outline" class="project_img" id="todos-logo"></ion-icon>
+                    <span class="project-item-span">Todos (CRUD)</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('bionic-reading')">
+                    <img src="./images/br.jpg" class="project_img">
+                    <span class="project-item-span"><b>Bio</b>nic<b>Read</b>ing</span>
+                </div>
+                <hr>
+  
+                <div class="project_item" onclick="goTo('discord-bot-warzone')">
+                    <ion-icon name="logo-discord" class="project_img" id="discord-logo"></ion-icon>
+                    <span class="project-item-span">Warzone Stats Bot (Node.js)</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('git-chatrooms')">
+                    <ion-icon name="chatbubbles-outline" class="project_img"></ion-icon>
+                    <span class="project-item-span">Chatrooms (Express.js)</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('rock-paper-scissors')">
+                    <ion-icon name="hand-right-outline" class="project_img" id="project_img_rps"></ion-icon>
+                    <span class="project-item-span">Rock, Paper, Scissors (Java Sockets)</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('git-boardem')">
+                    <img src="./images/boardem.jpg" class="project_img">
+                    <span class="project-item-span">boardem.co</span>
+                </div>
+                              
+            </div>
+
+            <div class="_card" id="design-projects">
+                <span class="card-title" id="designspan">Design Projects</span>
+                <div class="project_item" onclick="goTo('adobe_paws')">
+                    <img src="./images/usask.jpg" class="project_img">
+                    <span class="project-item-span">PAWS Registration</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('figma_boardem')">
+                    <img src="./images/boardem.jpg" class="project_img">
+                    <span class="project-item-span">boardem.co</span>
+                </div>
+                <hr>
+                <div class="project_item" onclick="goTo('figma_kristiantudv1')">
+                    <img src="./images/pfp1.png" class="project_img">
+                    <span class="project-item-span">kristiantud.me (v1)</span>
+                </div>
+            </div>
+
+            
+
+            <div class="_card" id="apollo-pictures">
+                <div id="apolloCarousel" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#apolloCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/1.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        
+                        <div class="carousel-item active">
+                            <img src="/images/carousel/apollo/4.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/5.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/6.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="/images/carousel/apollo/7.JPG" class="d-block w-100" alt="...">
+                        </div>
+            
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#apolloCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#apolloCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+
+            <div class="_card" id="github" onclick="goTo('github')">
+                <a href="#" id="github-link-container">
+                    <ion-icon name="logo-github" id="github-icon" class="link-card-icon"></ion-icon>
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+           
+
+            <div class="_card" id="spotify-site" onclick="goTo('spotify')">
+                <a href="#" id="spotify-link-container">
+                    <img src="./images/spotify-logo.png" class="link-card-icon" id="spotify-icon">
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+
+            <div class="_card" id="instagram" onclick="goTo('instagram')">
+                <a href="#" id="instagram-link-container">
+                    <ion-icon name="logo-instagram" id="instagram-icon" class="link-card-icon"></ion-icon>
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
+
+            <div class="_card" id="warzone" onclick="goTo('warzone-stats')">
+                <a href="#" id="warzone-link-container">
+                    <div class="wz-img-container">
+                        <div class="wz-img-opacity"></div>
+                        <img src="./images/wz.jpg" id="warzone-img" alt="">
+                    </div>
+                    <span id="warzone-span">Warzone Tournaments</span>
+                    <ion-icon name="arrow-redo-circle-outline" id="card-arrow"></ion-icon>
+                </a>
+            </div>
             
         </div>
+            
+            
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
-        function changeFont(val){
-            var titles = document.getElementsByName("content-title");
-            var subtitles = document.getElementsByName("content-subtitle");
-            if (val == 'small'){
-                document.getElementById("my-about").style.fontSize = '4vw';
-                for (var i = 0; i < titles.length; i++){
-                    titles[i].style.fontSize = '5.1vw';
-                    subtitles[i].style.fontSize = '4vw';
-                }
-            } else if (val == 'large'){
-                document.getElementById("my-about").style.fontSize = '4.5vw';
-                for (var i = 0; i < titles.length; i++){
-                    subtitles[i].style.fontSize = '4.8vw';
-                }
-                
-            }
-        }
-
-        $('.font-wrapper').css('visibility','hidden');
-
-        // function closeFont(){
-        //     $('.font-wrapper').css('visibility','hidden');
-        // }
-
-        // show the font-size thing when the site loads
-        // var sWidth = $(window).width();
-        // if (sWidth < 708){
-        //     // make the font-resize visible
-        //     $('.font-wrapper').css('visibility','visible');
-        // } else {
-        //     $('.font-wrapper').css('visibility','hidden');
-        // }
-
-        
-    </script>
+    
+    <!-- <script>
+    function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
+    </script> -->
+    
 </body>
 </html>
