@@ -85,7 +85,7 @@ body,html{
   transition: var(--transition-delay);
   font-family: 'Jost', sans-serif;
   margin: 10px 0; 
-  height: 354px;
+  height: 100%;
   width: 100%;
   font-size: 15px;
 
