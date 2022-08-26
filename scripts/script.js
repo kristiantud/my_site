@@ -128,9 +128,28 @@ darkModeKnob.addEventListener('click', () => {
     if (activated == false){
         activated = true;
         darkModeKnob.classList.add('activated');
+        loadMap("dark");
     } else {
         activated = false;
         darkModeKnob.classList.remove('activated');
+        loadMap("light");
     }
     
 });
+
+function loadMap(theme){
+    mapboxgl.accessToken = 'pk.eyJ1Ijoia3Jpc3RpYW50dWQiLCJhIjoiY2w3YTM3aHVmMGM0dzNwbm8wMjhtcGQwNCJ9.KZLYjFBV-AHWIq6q3sYjGg';
+    var style ='';
+    if (theme === "light") {
+        style=style + "light-v10";
+    } else {
+        style = style + "dark-v10";
+    }
+    const map = new mapboxgl.Map({
+        container: 'lightmap', // container ID
+        style: `mapbox://styles/mapbox/${style}`, // style URL
+        center: [-106.648713, 52.130657], // starting position [lng, lat]
+        zoom: 12  // starting zoom
+    });
+
+}
