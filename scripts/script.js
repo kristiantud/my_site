@@ -2,7 +2,7 @@
 function spotifyAPI() {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQDqTO6HcVupXfBferE2dv1uUl_4LgZwKJkqaGnrJWqwfgtFTdrTCXLx7ALjTaNGdFTuf7JdD8JDiuINmgPxFpjP5KpnJbeLHXmaYqVfTO85ZWNo8Y8CdBzTwrs9ZNoR4NPOHYFBwE4d1uCPNl1pilDG6IrUEoSPETmbiw-vm_4eW3c5Dx5ODPybeP1b5FDmPjhpHhVR';
+    const token = 'BQBw6xFdK2P9bc7_ZM4TPGR3_QbNwctGEAd8BT_CHGv25g2IARsNO2J1YvGvIGlJeXnL682k5aeIKDbdFlSUtixE1dYqEYFo_63q_xqOXhg_vPj9CJhelGESCvlHuKtRK1h4JVJ4uT729CnwyITfT4DYxXTudqk0rW-Pde1-JFGwQfvYD3LWChD4Yazb2PnHub3z0ByS';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=500");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
@@ -111,7 +111,7 @@ const options = {
     right: 'unset', // default: '32px'
     left: '32px', // default: 'unset'
     time: '0.5s', // default: '0.3s'
-    mixColor: 'darkgray', // default: '#fff'
+    mixColor: 'rgb(210, 210, 210)', // default: '#fff'
     backgroundColor: '#fff',  // default: '#fff'
     buttonColorDark: '#100f2c',  // default: '#100f2c'
     buttonColorLight: '#fff', // default: '#fff'
