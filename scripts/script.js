@@ -2,7 +2,7 @@
 function spotifyAPI() {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQAXSjpUDnhYx0ar9DYPJvMF2eoX3yx3RRP570KvWPg67Zs4pmGXMnQ-SYfyTqLXm8GO3mqJ6wWv-r171EwMetJgKPt5m1kNROyEuDgNgwT2t_I8x_070_orVryAk08YaDceOQoj-U10MaJEJq0vOjvvzbhE1ZXn_dWD2ZmRyODdkTTfj9TIM3PjlXyM_lYbbqfhWeNx';
+    const token = 'BQDqTO6HcVupXfBferE2dv1uUl_4LgZwKJkqaGnrJWqwfgtFTdrTCXLx7ALjTaNGdFTuf7JdD8JDiuINmgPxFpjP5KpnJbeLHXmaYqVfTO85ZWNo8Y8CdBzTwrs9ZNoR4NPOHYFBwE4d1uCPNl1pilDG6IrUEoSPETmbiw-vm_4eW3c5Dx5ODPybeP1b5FDmPjhpHhVR';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=500");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
@@ -198,9 +198,7 @@ for (const marker of geojson.features) {
     .addTo(map);
     }
 
-    
-            
-
-
-   
 }
+
+
+

@@ -296,7 +296,16 @@ body,html{
   }
 
   #projects hr{
-    margin: 13px 0;
+    /* margin: 13px 0; */
+    display: none;
+  }
+
+  .project-left{
+    width: 133px;
+  }
+
+  .project-right{
+    width: 133px;
   }
 
  
@@ -304,7 +313,7 @@ body,html{
   .project_item{
     display: flex;
     /* width: 146px; */
-    margin: 5px 0;
+    margin: 10px 0;
   }
 
   .project_item:hover{
@@ -312,17 +321,17 @@ body,html{
   }
 
   .project_img{
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
   }
 
   #project_img_rps{
-    /* margin-top: 10px; */
+    margin-top: 10px;
   }
 
   .project-item-span{
     font-size: 16px;
-    padding: 0 10px;
+    padding: 0 5px;
     
   }
 

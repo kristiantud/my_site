@@ -60,7 +60,8 @@
                 <span id="intro_span">
                     <span id="intro_intro">Hello! My name is</span><br><span id="intro_name">Kristian Tud</span><br>
                     <span id="intro_rest">
-                        I am a Computer Science graduate from USASK. I aspire to become a Full-Stack Website Developer/Software Engineer. I am also very interested in Philosophy and Psychology.  Nice to meet you!
+                        I am a Computer Science graduate from USASK. One of my biggest goals is to 
+                        be the best web developer/software engineer that I can possibly be. Besides Computer Science, I am also interested in Philosophy and Psychology. My hobbies include biking, lifting weights, guitar, basketball, and flying my drone.  Hit me up if you need a website!
                     </span>
                 </span>
                 <!-- <br> -->
@@ -90,13 +91,13 @@
                             <img src="/images/carousel/6.JPG" class="d-block w-100" alt="...">
                         </div>
 
-                        <div class="carousel-item">
+                        <div class="carousel-item active">
                             <img src="/images/carousel/3.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="/images/carousel/2.jpg" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <img src="./images/carousel/5.jpg" class="d-block w-100" alt="...">
                         </div>
                         
@@ -165,48 +166,53 @@
             </div>
 
             <div class="_card" id="projects">
+                
                 <span class="card-title" id="freelancespan">Projects</span>
-                <div class="project_item" onclick="goTo('complido-cars')">
-                    <img src="./images/cc.jpg" class="project_img">
-                    <span class="project-item-span">ComplidoCars.com</span>
+                <div class="project-left">
+                    <div class="project_item" onclick="goTo('discord-bot-warzone')">
+                        <ion-icon name="logo-discord" class="project_img" id="discord-logo"></ion-icon>
+                        <span class="project-item-span">WZ Stats Bot</span>
+                    </div>
+                    <hr>
+                    <div class="project_item" onclick="goTo('git-hanabi')">
+                        <img src="./images/hanabi.png" class="project_img">
+                        <span class="project-item-span">Hanabi</span>
+                    </div>
+                    <hr>
+                    <div class="project_item" onclick="goTo('git-todos')">
+                        <ion-icon name="list-outline" class="project_img" id="todos-logo"></ion-icon>
+                        <span class="project-item-span">Todos</span>
+                    </div>
+                    <hr>
+                    <div class="project_item" onclick="goTo('rock-paper-scissors')">
+                        <ion-icon name="hand-right-outline" class="project_img" id="project_img_rps"></ion-icon>
+                        <span class="project-item-span">Rock, Paper, Scissors</span>
+                    </div>
+                    <hr>
+                    
                 </div>
-                <hr>
-                <div class="project_item" onclick="goTo('git-hanabi')">
-                    <img src="./images/hanabi.png" class="project_img">
-                    <span class="project-item-span">Hanabi</span>
-                </div>
-                <hr>
-                <div class="project_item" onclick="goTo('git-todos')">
-                    <ion-icon name="list-outline" class="project_img" id="todos-logo"></ion-icon>
-                    <span class="project-item-span">Todos (CRUD)</span>
-                </div>
-                <hr>
-                <div class="project_item" onclick="goTo('bionic-reading')">
-                    <img src="./images/br.jpg" class="project_img">
-                    <span class="project-item-span"><b>Bio</b>nic<b>Read</b>ing</span>
-                </div>
-                <hr>
-  
-                <div class="project_item" onclick="goTo('discord-bot-warzone')">
-                    <ion-icon name="logo-discord" class="project_img" id="discord-logo"></ion-icon>
-                    <span class="project-item-span">Warzone Stats Bot (Node.js)</span>
-                </div>
-                <hr>
-                <div class="project_item" onclick="goTo('git-chatrooms')">
-                    <ion-icon name="chatbubbles-outline" class="project_img"></ion-icon>
-                    <span class="project-item-span">Chatrooms (Express.js)</span>
-                </div>
-                <hr>
-                <div class="project_item" onclick="goTo('rock-paper-scissors')">
-                    <ion-icon name="hand-right-outline" class="project_img" id="project_img_rps"></ion-icon>
-                    <span class="project-item-span">Rock, Paper, Scissors (Java Sockets)</span>
-                </div>
-                <hr>
-                <div class="project_item" onclick="goTo('git-boardem')">
-                    <img src="./images/boardem.jpg" class="project_img">
-                    <span class="project-item-span">boardem.co</span>
-                </div>
-                              
+                
+                <div class="project-right">
+                    <div class="project_item" onclick="goTo('complido-cars')">
+                        <img src="./images/cc.jpg" class="project_img">
+                        <span class="project-item-span">ComplidoCars.com</span>
+                    </div>
+                    <hr>
+                    <div class="project_item" onclick="goTo('git-chatrooms')">
+                        <ion-icon name="chatbubbles-outline" class="project_img"></ion-icon>
+                        <span class="project-item-span">Chatrooms </span>
+                    </div>
+                    <hr>
+                    <div class="project_item" onclick="goTo('bionic-reading')">
+                        <img src="./images/br.jpg" class="project_img">
+                        <span class="project-item-span"><b>Bio</b>nic<b>Read</b>ing</span>
+                    </div>
+                    <hr>
+                    <div class="project_item" onclick="goTo('git-boardem')">
+                        <img src="./images/boardem.jpg" class="project_img">
+                        <span class="project-item-span">boardem.co</span>
+                    </div>
+                </div>       
             </div>
 
             <div class="_card" id="design-projects">
