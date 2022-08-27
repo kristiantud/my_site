@@ -40,8 +40,8 @@ body,html{
 
 #navbar-button{
   display: flex;
-  padding: 4px;
-  background: linear-gradient(45deg, rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90%);
+  padding: 3px;
+  background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%);
   border-radius: 100px;
   transition: all 0.3s;
 }
@@ -84,6 +84,7 @@ body,html{
     font-family: 'Jost', sans-serif;
     font-size: 20px;
     transition: 0.1s ease-in;
+    border: 2px solid #d1d1d1;
 }
 
 /* .card-button{
@@ -133,12 +134,12 @@ body,html{
 
 #intro_name{
     font-size: 70px;
-    font-family: 'Playfair Display SC', serif;
+    /* font-family: 'Playfair Display SC', serif; */
+    font-family: 'Righteous', cursive;
     /* background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 ); */
-    background-image: radial-gradient( circle farthest-corner at -4.5% 34.3%,  rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90% );
+    background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   letter-spacing: -1px;
    line-height: 75px;
 }
 
@@ -148,7 +149,7 @@ body,html{
     padding: 0;
 }
 
-.map { position: absolute; top: 0; bottom: 0; width: 556px; height: 266px; border-radius: 32px; }
+.map { position: absolute; top: 0; bottom: 0; width: 552px; height: 262px; border-radius: 32px; }
 
 #pictures{
     padding: 0;
@@ -291,9 +292,7 @@ body,html{
     width: 25px;
   }
 
-  #project_img_rps{
-    margin-top: 10px;
-  }
+
 
   .project-item-span{
     font-size: 16px;

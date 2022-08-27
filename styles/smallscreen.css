@@ -43,8 +43,9 @@ body,html{
 
 #navbar-button{
   display: flex;
-  padding: 2px;
-  background: linear-gradient(45deg, rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90%);
+  padding: 3px;
+  /* background: linear-gradient(45deg, rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90%); */
+  background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%);
   border-radius: 100px;
   transition: all 0.3s;
 }
@@ -57,7 +58,7 @@ body,html{
   font-size: 16px;
   background: white;
   transition: var(--transition-delay);
-  padding: 8px 16px;
+  padding: 5px 10px;
 
 }
 
@@ -145,14 +146,16 @@ body,html{
 }
 
 #intro_name{
-    font-size: 35px;
-    font-family: 'Playfair Display SC', serif;
+    font-size: 45px;
+    font-family: 'Righteous', cursive;
+
     /* background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 ); */
-    background-image: radial-gradient( circle farthest-corner at -4.5% 34.3%,  rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90% );
+    /* background-image: radial-gradient( circle farthest-corner at -4.5% 34.3%,  #C04848 0%, #480048 50% , #C04848); */
+    background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   letter-spacing: -1px;
-   line-height: 50px;
+   /* letter-spacing: -1px; */
+   line-height: 70px;
 }
 
 #map{
