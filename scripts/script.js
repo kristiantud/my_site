@@ -1,8 +1,9 @@
 
-function spotifyAPI(token) {
+
+function spotifyAPI() {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    // const token = 'BQBw6xFdK2P9bc7_ZM4TPGR3_QbNwctGEAd8BT_CHGv25g2IARsNO2J1YvGvIGlJeXnL682k5aeIKDbdFlSUtixE1dYqEYFo_63q_xqOXhg_vPj9CJhelGESCvlHuKtRK1h4JVJ4uT729CnwyITfT4DYxXTudqk0rW-Pde1-JFGwQfvYD3LWChD4Yazb2PnHub3z0ByS';
+    const token = 'BQDAhfub0OZldOd_nneI2XOUcKNc7wPEzY2BMIGfJCDt3o8ghM_2kwSitzxi88XbhqLKX44k9V-y1gOgokRQZUFAlT4C-E_Wb2S4BZLf8MiVv_p2rPWEmImbSVF8298QjH5vwt8IZ6t3pz_yGDjXPX0tNNUEuhBP3zAYkoXmY7Pl2AZYFqSdjpHXIPdWCztqtBRLmYs7';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=1");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
@@ -204,7 +205,7 @@ for (const marker of geojson.features) {
 // grabbing token from spotify:
 const clientId = 'beb0bfba13774fdd908996e1f4ae0279';
 const clientSecret = 'fb3d6946a9b94ad2bfb4e590775dcb3f';
-const redirect_uri = 'https://kristiantud.me';
+const redirect_uri = 'https://kristiantud.me/';
 var urlString = "https://accounts.spotify.com/api/token";
 
 
