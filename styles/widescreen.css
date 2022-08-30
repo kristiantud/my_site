@@ -536,7 +536,7 @@ body,html{
   width: 100%;
   grid-row: 5;
   grid-column: 2/4;
-  column-gap: 32px;
+  column-gap: 24px;
 }
 
 #spotify-site{
