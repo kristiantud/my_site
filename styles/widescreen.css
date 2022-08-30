@@ -529,3 +529,20 @@ body,html{
 #tiktok:hover{
   cursor: pointer;
 }
+
+
+.spotify-instagram-flexbox-container{
+  display: flex;
+  width: 100%;
+  grid-row: 5;
+  grid-column: 2/4;
+  column-gap: 32px;
+}
+
+#spotify-site{
+  width: 100%;
+}
+
+#instagram{
+  width: 100%;
+}

@@ -43,7 +43,7 @@ function goTo(site){
     }
 
     if (site==="adobe_paws"){
-        window.open("https://xd.adobe.com/view/ebd65a8d-834b-4d44-ab10-c1f65cbea44b-be85/", '_blank').focus();
+        window.open("https://xd.adobe.com/view/ebd65a8d-834b-4d44-ab10-c1f65cbea44b-be85/grid", '_blank').focus();
     }
 
     if (site==="figma_boardem"){
