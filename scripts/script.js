@@ -1,11 +1,11 @@
 
 
-function spotifyAPI() {
+function spotifyAPI(accessToken) {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQDAhfub0OZldOd_nneI2XOUcKNc7wPEzY2BMIGfJCDt3o8ghM_2kwSitzxi88XbhqLKX44k9V-y1gOgokRQZUFAlT4C-E_Wb2S4BZLf8MiVv_p2rPWEmImbSVF8298QjH5vwt8IZ6t3pz_yGDjXPX0tNNUEuhBP3zAYkoXmY7Pl2AZYFqSdjpHXIPdWCztqtBRLmYs7';
+    // const token = 'BQAovx_DLD4i1ozJvuM_nYD9S77Ig_OOFtlXnPLlGADF_QOG5F0cxRkKsPoA1GmXeEQYOKWpFDWenQ_jg4HwRa5mlAq9El_WgUPAMgwoLQBV7rK66MbVCSNDYxf-WzuG1-9h4fit4i51TUiOBDiBC-RiUHizchJKc6tHkFH5fWPe-FYTkPpjjSGcrSy_DhkDg1d_1bpo';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=1");
-    xhr.setRequestHeader('Authorization', 'Bearer ' + token );
+    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken );
     xhr.send();
 
     xhr.onload = () => {
@@ -204,80 +204,100 @@ for (const marker of geojson.features) {
 
 // grabbing token from spotify:
 const clientId = 'beb0bfba13774fdd908996e1f4ae0279';
-const clientSecret = 'fb3d6946a9b94ad2bfb4e590775dcb3f';
-const redirect_uri = 'https://kristiantud.me/';
-var urlString = "https://accounts.spotify.com/api/token";
+const redirect_uri = 'https://kristiantud.me';
 
 
+
+// on load, three different scenarios to handle:
+// first load (won't have spotify loaded) -- so we have to call the buildAuthLink()
+// second load will have the access code from the buildAuthLink()
+// third load will have the spotify loaded but without the need to call buildAuthLink()
 function onPageLoad(){
-    if (window.location.search.length > 0){
+    var url = window.location.hash;
+    if (url.length > 7){
         handleRedirect();
-    } else {
-        requestAuth();
-    }
+    } else if (url != "#loaded"){
+        buildAuthLink();
+    } 
+    
 }
+
 
 function handleRedirect(){
-    let code = getCode();
-    fetchAccessToken(code);
-    window.history.pushState("", "", redirect_uri);
+    const currentQueryParameters = getCurrentQueryParameters('#');
+    ACCESS_TOKEN = currentQueryParameters.get('access_token');
+    spotifyAPI(ACCESS_TOKEN);
+    window.history.pushState("", "", redirect_uri + "#loaded");
 }
 
-function fetchAccessToken(code){
-    let body = "grant_type=authorization_code";
-    body += "&code=" + code;
-    body += "&redirect_uri=" + encodeURI(redirect_uri);
-    body += "&client_id=" + clientId;
-    body += "&client_secret=" + clientSecret;
-    callAuthorizationApi(body);
 
-}
 
-function callAuthorizationApi(body){
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", urlString, true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.setRequestHeader('Authorization', 'Basic ' + btoa(clientId + ":" + clientSecret));
-    xhr.send(body);
-    xhr.onload = handleAuthorizationResponse;
+// function handleRedirect(){
+//     let code = getCode();
+//     fetchAccessToken(code);
+//     window.history.pushState("", "", redirect_uri);
+// }
 
-}
+// function fetchAccessToken(code){
+//     let body = "grant_type=authorization_code";
+//     body += "&code=" + code;
+//     body += "&redirect_uri=" + encodeURI(redirect_uri);
+//     body += "&client_id=" + clientId;
+//     body += "&client_secret=" + clientSecret;
+//     callAuthorizationApi(body);
 
-function handleAuthorizationResponse(){
-    if (this.status == 200){
-        var data = JSON.parse(this.responseText);
-        console.log(data);
-        if (data.access_token != undefined){
-            spotifyAPI(data.access_token);
-            // console.log(data.access_token);
-        }
+// }
+
+// function callAuthorizationApi(body){
+//     let xhr = new XMLHttpRequest();
+//     xhr.open("POST", urlString, true);
+//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//     xhr.setRequestHeader('Authorization', 'Basic ' + btoa(clientId + ":" + clientSecret));
+//     xhr.send(body);
+//     xhr.onload = handleAuthorizationResponse;
+
+// }
+
+// function handleAuthorizationResponse(){
+//     if (this.status == 200){
+//         var data = JSON.parse(this.responseText);
+//         console.log(data);
+//         if (data.access_token != undefined){
+//             spotifyAPI(data.access_token);
+//             // console.log(data.access_token);
+//         }
         
-    } else {
-        console.log(this.responseText);
-    }
-}
+//     } else {
+//         console.log(this.responseText);
+//     }
+// }
 
-function getCode(){
-    let code = null;
-    const queryString = window.location.search;
-    if (queryString.length > 0){
-        const urlParams = new URLSearchParams(queryString);
-        code = urlParams.get('code');
-    }
-
-    console.log(code);
-    return code;
+function getCurrentQueryParameters(delimiter = '#') {
+    // the access_token is passed back in a URL fragment, not a query string
+    // errors, on the other hand are passed back in a query string
+    const currentLocation = String(window.location).split(delimiter)[1];
+    const params = new URLSearchParams(currentLocation);
+    return params;
 }
 
 
-function requestAuth(){
-    let url = 'https://accounts.spotify.com/authorize'
-    url += "?client_id=" + clientId;
-    url += "&response_type=code";
-    url += "&redirect_uri=" + encodeURI(redirect_uri);
-    url += "&show_dialog=true";
-    url += "&scope=user-read-recently-played";
-    window.location.href = url;
+// function requestAuth(){
+//     let url = 'https://accounts.spotify.com/authorize'
+//     url += "?client_id=" + clientId;
+//     url += "&response_type=code";
+//     url += "&redirect_uri=" + encodeURI(redirect_uri);
+//     url += "&show_dialog=true";
+//     url += "&scope=user-read-recently-played";
+//     window.location.href = url;
+// }
+
+
+
+function buildAuthLink(){
+    var authURL = "https://accounts.spotify.com/authorize?";
+    authURL += "client_id=" + clientId;
+    authURL += "&response_type=token";
+    authURL += "&redirect_uri=" + redirect_uri;
+    authURL += "&scope=user-read-recently-played";
+    window.location.href = authURL;
 }
-
-
