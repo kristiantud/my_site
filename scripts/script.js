@@ -222,7 +222,6 @@ function onPageLoad(){
     
 }
 
-
 function handleRedirect(){
     const currentQueryParameters = getCurrentQueryParameters('#');
     ACCESS_TOKEN = currentQueryParameters.get('access_token');
@@ -230,6 +229,22 @@ function handleRedirect(){
     window.history.pushState("", "", redirect_uri + "#loaded");
 }
 
+function getCurrentQueryParameters(delimiter = '#') {
+    // the access_token is passed back in a URL fragment, not a query string
+    // errors, on the other hand are passed back in a query string
+    const currentLocation = String(window.location).split(delimiter)[1];
+    const params = new URLSearchParams(currentLocation);
+    return params;
+}
+
+function buildAuthLink(){
+    var authURL = "https://accounts.spotify.com/authorize?";
+    authURL += "client_id=" + clientId;
+    authURL += "&response_type=token";
+    authURL += "&redirect_uri=" + redirect_uri;
+    authURL += "&scope=user-read-recently-played";
+    window.location.href = authURL;
+}
 
 
 // function handleRedirect(){
@@ -272,13 +287,6 @@ function handleRedirect(){
 //     }
 // }
 
-function getCurrentQueryParameters(delimiter = '#') {
-    // the access_token is passed back in a URL fragment, not a query string
-    // errors, on the other hand are passed back in a query string
-    const currentLocation = String(window.location).split(delimiter)[1];
-    const params = new URLSearchParams(currentLocation);
-    return params;
-}
 
 
 // function requestAuth(){
@@ -293,11 +301,3 @@ function getCurrentQueryParameters(delimiter = '#') {
 
 
 
-function buildAuthLink(){
-    var authURL = "https://accounts.spotify.com/authorize?";
-    authURL += "client_id=" + clientId;
-    authURL += "&response_type=token";
-    authURL += "&redirect_uri=" + redirect_uri;
-    authURL += "&scope=user-read-recently-played";
-    window.location.href = authURL;
-}
