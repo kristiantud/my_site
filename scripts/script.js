@@ -209,8 +209,8 @@ for (const marker of geojson.features) {
     const el = document.createElement('div');
     el.className = 'marker';
     el.style.backgroundImage = `url(./images/map-memoji.png)`;
-    el.style.width = `90px`;
-    el.style.height = `90px`;
+    el.style.width = `100px`;
+    el.style.height = `100px`;
     el.style.backgroundSize = '100%';
      
     el.addEventListener('click', () => {
