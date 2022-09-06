@@ -1,11 +1,35 @@
 
+//trying the client credential flow
+// function spotify(){
+//     var client_id = 'beb0bfba13774fdd908996e1f4ae0279';
+//     var client_secret = 'fb3d6946a9b94ad2bfb4e590775dcb3f';
+//     var apiURL = 'https://api.spotify.com/v1/users/kristiantud';
+//     var tokenURL = 'https://accounts.spotify.com/api/token';
+
+
+//     var xhr = new XMLHttpRequest();
+//     let body = "grant_type=client_credentials";
+//     xhr.open("POST", tokenURL);
+//     xhr.setRequestHeader('Authorization', 'Basic ' + btoa(client_id + ':' + client_secret));
+//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//     xhr.send(body);
+//     xhr.onload = () => {
+//         const responseJSON = xhr.responseText;
+//         const JSONified = JSON.parse(responseJSON);
+//         console.log(JSONified.access_token);
+//         spotifyAPI(JSONified.access_token);
+//     }
+// }
+
+
+
 
 function spotifyAPI(accessToken) {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    // const token = 'BQAovx_DLD4i1ozJvuM_nYD9S77Ig_OOFtlXnPLlGADF_QOG5F0cxRkKsPoA1GmXeEQYOKWpFDWenQ_jg4HwRa5mlAq9El_WgUPAMgwoLQBV7rK66MbVCSNDYxf-WzuG1-9h4fit4i51TUiOBDiBC-RiUHizchJKc6tHkFH5fWPe-FYTkPpjjSGcrSy_DhkDg1d_1bpo';
+    // const token = 'BQBlM1j6gr9RhtWca1EtEPLi9ssOeRXYKWk_8sgFfkj_c2sNJ0TAEmabC1F5PO33uL9QB5BrHQMjWPxLmZnwhWLjBGvHpq0IYL-tHyoXN7YSJqytOTE';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=1");
-    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken );
+    xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
 
     xhr.onload = () => {
@@ -185,8 +209,8 @@ for (const marker of geojson.features) {
     const el = document.createElement('div');
     el.className = 'marker';
     el.style.backgroundImage = `url(./images/map-memoji.png)`;
-    el.style.width = `120px`;
-    el.style.height = `120px`;
+    el.style.width = `90px`;
+    el.style.height = `90px`;
     el.style.backgroundSize = '100%';
      
     el.addEventListener('click', () => {
@@ -264,11 +288,11 @@ function buildAuthLink(){
 // }
 
 // function callAuthorizationApi(body){
-//     let xhr = new XMLHttpRequest();
-//     xhr.open("POST", urlString, true);
-//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-//     xhr.setRequestHeader('Authorization', 'Basic ' + btoa(clientId + ":" + clientSecret));
-//     xhr.send(body);
+    // let xhr = new XMLHttpRequest();
+    // xhr.open("POST", urlString, true);
+    // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    // xhr.setRequestHeader('Authorization', 'Basic ' + btoa(clientId + ":" + clientSecret));
+    // xhr.send(body);
 //     xhr.onload = handleAuthorizationResponse;
 
 // }
