@@ -127,6 +127,10 @@ function goTo(site){
         window.open("https://tiktok.com/@kristiantud").focus();
     }
 
+    if (site==="it-chatrooms-rest"){
+        windows.open("https://github.com/kristiantud/ChatroomsREST").focus();
+    }
+
 }
 
 
