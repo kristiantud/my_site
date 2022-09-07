@@ -442,17 +442,16 @@ body,html{
   text-decoration: none;
   display: flex;
   flex-wrap: wrap;
-  height: 80%;
+  height: 95%;
   margin: auto;
   width: 50%;
   
  }
 
  #mbti-icon{
-  padding-top: 0;
   margin-top: 20px;
-  margin-bottom: 8px;
-  height: 40px;
+  /* margin-bottom: 5px; */
+  height: 45px;
   width: 50px;
   
  }
