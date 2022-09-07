@@ -115,8 +115,8 @@ function goTo(site){
         window.open("https://git.cs.usask.ca/krt916/assignment4_350/",'_blank').focus();
     }
 
-    if (site==="spotify"){
-        window.open("https://open.spotify.com/user/r5da6znbljz78gi5s9m5a8age?si=4137b0c0bf0a49ed", "_blank").focus();
+    if (site==="mbti-result"){
+        window.open("https://personalitymax.com/report/?pt=21-21-79-37&mi=63-77-70-77-77-67-70-77&ls=62-59-77&bh=48&name_key=1ea1e076a5", "_blank").focus();
     }
 
     if (site==="warzone-stats"){
