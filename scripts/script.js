@@ -27,7 +27,7 @@
 function spotifyAPI(accessToken) {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQC7MUc2hEHL-fDv5xsX3AQ7pj07zDVKr5mF131akVR07To5tZv-PhqOFd3M0fo6zTfmr1DYiMaZcFyDaNxzkYyNkFyzJhseVVimODkdZk8ar4ddE0i46iryYqVIAWnjjex3byDGCRpSZJpVTmybJpezf_gWV02aSIygfZXLCaK9uCZD8QxCQaiPM4XMtX938yHoeJvm';
+    const token = 'BQCFo-PS5_DVHOHBqASXcl7KuRCitrPHB23HpUsc8UVZ0fz_cAjIGddc8mF9E3ZavqY6Lwd8Fa5LqVDv4m_1MoZC77Vc_uhCfFoTLaM0IhWaxjZ3K9Z-nrLsnyLR7-vIPYNbF_F2_SYYLaNrBPbMc0upenBty2MkZ_muardTZw5xrDVdcBYRjH1sXuc6SBXHK-otdUzd';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=1");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
