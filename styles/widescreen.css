@@ -344,6 +344,8 @@ body,html{
     position: relative;
 }
 
+
+
   #instagram-link-container{
     display: block;
     height: 100%;
@@ -375,10 +377,13 @@ body,html{
  }
 
  #mbti-site{
+  width: 100%;
   background: linear-gradient(to bottom, #893dc2,#222222);
   position: relative;
   text-align: center;
  }
+
+
 
  #mbti-site:hover{
   cursor: pointer;
@@ -455,7 +460,7 @@ body,html{
 
  .darkmode--activated ._card{
   transition: 0.1s ease-in;
-  background-color: #181818;
+  background-color: #1a1a1a;
   color: rgb(209, 209, 209);
   /* border: 2px solid #7c7c85; */
   
@@ -548,9 +553,6 @@ body,html{
   column-gap: 24px;
 }
 
-#mbti-site{
-  width: 100%;
-}
 
 #instagram{
   width: 100%;
