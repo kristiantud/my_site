@@ -2,7 +2,7 @@
 //trying the client credential flow
 // function spotify(){
 //     var client_id = 'beb0bfba13774fdd908996e1f4ae0279';
-//     var client_secret = 'fb3d6946a9b94ad2bfb4e590775dcb3f';
+
 //     var apiURL = 'https://api.spotify.com/v1/users/kristiantud';
 //     var tokenURL = 'https://accounts.spotify.com/api/token';
 
@@ -27,7 +27,7 @@
 function spotifyAPI(accessToken) {
     // get spotify recently played
     let xhr = new XMLHttpRequest();
-    const token = 'BQBcBEw9sIe80dItum316YyNC_hTsF8okHJRcJvhiHtO3QxfrDBcVOTCEiNkdnQMIzZGLl8edMGyQKkisgAXDBwHZGHYAQ6StkROlhKN-NTOyYt-mZC4bOb-6FnW1n-sviPytL_hh7q14osUk019p0kGJvW1ft20_gka6HtJ_iEXgPGrHdWaYIt_jBW2CMZjedZHqEMd';
+    const token = 'BQA_OofFbBvJ9rq5V07AtMmMHkInQN1h_bCffiS5W4bHvSA0KgNWsz5-VQI5ckLIyy9t2ZfCg2TDMEAvXRN0Vsrkl7vGy6nRjG1MxKq9KLdgHbLJvnjSG1Q1qgUzbviRvPFCpGfp42IE4Vghlp-M2c3NNmhIWaCKPxjtx-049hoTNsnmiqp691K7X1wngJp8lF5Z7jsx';
     xhr.open("GET", "https://api.spotify.com/v1/me/player/recently-played?limit=1&after=1");
     xhr.setRequestHeader('Authorization', 'Bearer ' + token );
     xhr.send();
