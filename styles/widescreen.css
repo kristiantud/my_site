@@ -168,6 +168,36 @@ body,html{
     grid-row: 2/4;
 }
 
+.year_divider{
+  
+  
+}
+.year_divider_content_wrapper{
+  width: 100%;
+  background-color: rgb(158, 158, 158);
+  border-radius: 100px;
+}
+
+.years_section{
+  padding:0;
+  display: flex;
+  list-style: none;
+
+}
+
+.years_section li{
+  font-size: 15px;
+  margin: 3px 5px 5px 3px;
+  padding: 5%;
+  
+  border-radius: 100px;
+
+}
+
+.years_section li.active{
+  background-color: white;
+}
+
 .stat{
     padding-bottom: 10px;
 }
@@ -216,12 +246,12 @@ body,html{
 }
 
 #song_title{
-    /* font-size: 30px; */
+    font-size: 18px;
     font-weight: bold;
 }
 
 #song_artist{
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .playing-status-container{
