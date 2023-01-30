@@ -182,14 +182,14 @@ body,html{
   padding:0;
   display: flex;
   list-style: none;
+  justify-content: center;
 
 }
 
 .years_section li{
   font-size: 15px;
-  margin: 3px 5px 5px 3px;
-  padding: 5%;
-  
+  margin: 3px 5px 3px 5px ;
+  padding: 0 8px;
   border-radius: 100px;
 
 }
