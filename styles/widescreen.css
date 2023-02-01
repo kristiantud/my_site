@@ -113,13 +113,20 @@ body,html{
 }
 
 #freelancespan{
-  padding-bottom: 15px;
-    font-size: 25px;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+#freelance-title-holder{
+  height: 55px;
 }
 
 
 
-
+.card-title-holder{
+  text-align: center;
+  
+}
 
 .card-title{
     font-family: 'Fjalla One', sans-serif;
@@ -169,12 +176,12 @@ body,html{
 }
 
 .year_divider{
-  
+  padding: 0 15px;
   
 }
 .year_divider_content_wrapper{
   width: 100%;
-  background-color: rgb(158, 158, 158);
+  background-color: #ccc;
   border-radius: 100px;
 }
 
@@ -187,9 +194,10 @@ body,html{
 }
 
 .years_section li{
+  cursor: pointer;
   font-size: 15px;
-  margin: 3px 5px 3px 5px ;
-  padding: 0 8px;
+  margin: 3px 3px 3px 3px ;
+  padding: 0 10px;
   border-radius: 100px;
 
 }
@@ -199,7 +207,7 @@ body,html{
 }
 
 .stat{
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .stat_title{
@@ -309,6 +317,7 @@ body,html{
 
   #projects hr{
     margin: 13px 0;
+
   }
 
  
