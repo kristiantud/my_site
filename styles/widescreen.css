@@ -1,7 +1,8 @@
 body,html{
     padding: 0;
     margin: 0;
-    font-family: 'Jost', sans-serif;
+    /* font-family: 'Jost', sans-serif; */
+    
     
 
 }
@@ -48,7 +49,8 @@ body,html{
 }
 
 #navbar-button a{
-  font-family: 'Jost', sans-serif;
+  /* font-family: 'Jost', sans-serif; */
+  font-family: 'Athiti', sans-serif;
   text-decoration: none;
   border-radius: 100px;
   color: var(--text-color);
@@ -82,7 +84,8 @@ body,html{
     box-shadow: 0.2rem 0.4rem 12rem rgba(9, 18, 37, 0.247);
     padding: 32px;
     transition: var(--transition-delay);
-    font-family: 'Jost', sans-serif;
+    /* font-family: 'Jost', sans-serif; */
+    font-family: 'Athiti', sans-serif;
     font-size: 20px;
     transition: 0.1s ease-in;
     /* border: 2px solid #aebbc5; */
@@ -96,6 +99,7 @@ body,html{
 } */
 
 #intro_intro{
+  
     font-size: 25px;
     font-weight: bold;
 }
@@ -103,7 +107,7 @@ body,html{
 #intro_rest{
     display: inline-block;
     padding-top: 15px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 #memoji{
@@ -129,7 +133,8 @@ body,html{
 }
 
 .card-title{
-    font-family: 'Fjalla One', sans-serif;
+    /* font-family: 'Fjalla One', sans-serif; */
+    font-family: 'Yeseva One', cursive;
     font-size: 25px;
     display: inline-block;
     padding-bottom: 20px;
@@ -144,7 +149,10 @@ body,html{
 #intro_name{
     font-size: 70px;
     /* font-family: 'Playfair Display SC', serif; */
-    font-family: 'Righteous', cursive;
+    /* font-family: 'Righteous', cursive; */
+    font-family: 'Yeseva One', cursive;
+    /* font-family: 'DM Serif Display', serif; */
+    font-weight: bold;
 
 
     /* background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 ); */
@@ -207,19 +215,31 @@ body,html{
   background-color: white;
 }
 
+.yearsView {
+  display: none;
+}
+
+.yearsView.active{
+  display: initial;
+}
+
 .stat{
     padding-bottom: 5px;
 }
 
 .stat_title{
-    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'Bebas Neue', cursive; */
+    /* font-family: 'Yeseva One', cursive; */
+    font-family: 'Athiti', sans-serif;
     font-size: 18px;
 }
 
 .stat_value{
-    font-size: 30px;
+    font-size: 25px;
     /* font-family: 'Oswald', sans-serif; */
-    font-family: 'Jost', sans-serif;
+    /* font-family: 'Jost', sans-serif; */
+    font-family: 'Yeseva One', cursive;
+    
     font-weight: bold;
     
 }
@@ -514,6 +534,18 @@ body,html{
 
  .darkmode--activated #spotify-album-cover{
     box-shadow: 7px 7px 10px  #0f0f0f;
+ }
+
+ .darkmode--activated .years{
+  color: black;
+ }
+
+ .darkmode--activated .year_divider_content_wrapper {
+  background-color: #525252;
+ }
+
+ .darkmode--activated .dark-toggle-switch{
+  background: #525252;
  }
 
  .darkmode--activated #navbar-button a{

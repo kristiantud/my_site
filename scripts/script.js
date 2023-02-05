@@ -331,10 +331,20 @@ function buildAuthLink(){
 
 // add different views to the biking dashboard
 
+
+
 //first grab all the years
 const yearStats = document.getElementsByClassName("years");
 const yearStatsViews = document.getElementsByClassName("yearsView");
 // console.log(yearStats);
+
+function showYearView(){
+    for (var i = 0; i < yearStats.length; i++){
+        if (yearStats[i].classList.contains("active")){
+            return i;
+        }
+    }
+}
 
 // second, add the eventlisteners
 for (var x = 0; x < yearStats.length; x++){
@@ -348,5 +358,17 @@ for (var x = 0; x < yearStats.length; x++){
         this.classList.add("active");
         
         // display the view that yearStats[x] refers to (the same index as x)
+        // how to figure out what x is?
+        // we could call a function to go through every year stats to find the index that has the "Active" class, return it, and then show that index
+
+        var yearViewIndex = showYearView();
+        
+        // remove all active yearViews
+        for (var z =0; z < yearStatsViews.length; z++){
+            yearStatsViews[z].classList.remove("active");
+        }
+
+        yearStatsViews[yearViewIndex].classList.add("active");
+        
     })
 }
