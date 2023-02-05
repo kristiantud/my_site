@@ -173,10 +173,11 @@ body,html{
 #bikestats{
     grid-column:4;
     grid-row: 2/4;
+    padding-bottom: 12px;
 }
 
 .year_divider{
-  padding: 0 15px;
+  padding: 0 20px;
   
 }
 .year_divider_content_wrapper{
@@ -202,7 +203,7 @@ body,html{
 
 }
 
-.years_section li.active{
+.years.active{
   background-color: white;
 }
 

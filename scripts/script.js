@@ -329,3 +329,24 @@ function buildAuthLink(){
 
 
 
+// add different views to the biking dashboard
+
+//first grab all the years
+const yearStats = document.getElementsByClassName("years");
+const yearStatsViews = document.getElementsByClassName("yearsView");
+// console.log(yearStats);
+
+// second, add the eventlisteners
+for (var x = 0; x < yearStats.length; x++){
+    yearStats[x].addEventListener("click", function(){
+        // function to remove all existing "active"
+        for (var y =0; y < yearStats.length; y++){
+            yearStats[y].classList.remove("active");
+        }
+
+        // add active to the class of yearStats[x]
+        this.classList.add("active");
+        
+        // display the view that yearStats[x] refers to (the same index as x)
+    })
+}
