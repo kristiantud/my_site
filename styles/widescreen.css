@@ -632,3 +632,12 @@ body,html{
 #instagram{
   width: 100%;
 }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 16px !important;
+}
