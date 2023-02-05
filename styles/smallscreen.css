@@ -1,7 +1,8 @@
 body,html{
     padding: 0;
     margin: 0;
-    font-family: 'Jost', sans-serif;
+    /* font-family: 'Jost', sans-serif; */
+    font-family: 'Athiti', sans-serif;
 
 }
 
@@ -50,7 +51,8 @@ body,html{
 }
 
 #navbar-button a{
-  font-family: 'Jost', sans-serif;
+  /* font-family: 'Jost', sans-serif; */
+  font-family: 'Athiti', sans-serif;
   text-decoration: none;
   border-radius: 100px;
   color: var(--text-color);
@@ -87,7 +89,8 @@ body,html{
               5px 5px 10px rgba(0,0,0,0.25);
   padding: 32px;
   transition: var(--transition-delay);
-  font-family: 'Jost', sans-serif;
+  /* font-family: 'Jost', sans-serif; */
+  font-family: 'Athiti', sans-serif;
   margin: 15px 0; 
   height: 100%;
   width: 100%;
@@ -115,27 +118,32 @@ body,html{
 }
 
 #memoji{
-    height: 100px;
-    width: 100px;
-    margin-bottom:5px
+    height: 120px;
+    width: 120px;
+    margin-bottom:15px
 }
 
 #freelancespan{
     font-size: 30px;
     padding-bottom: 10px;
-    width: 100%;
+    
 }
 
 
 
-
+.card-title-holder{
+  text-align: center;
+  
+}
 
 .card-title{
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 30px;
+    /* font-family: 'Fjalla One', sans-serif; */
+    font-family: 'Yeseva One', cursive;
+    font-size: 25px;
     display: inline-block;
     padding-bottom: 20px;
 }
+
 
 #intro{
     /* grid-column: 1/3;
@@ -147,8 +155,9 @@ body,html{
 }
 
 #intro_name{
-    font-size: 43px;
-    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    /* font-family: 'Righteous', cursive; */
+    font-family: 'Yeseva One', cursive;
     font-weight: bold;
     /* background: -webkit-linear-gradient(#03001e, #7303c0, #f64f59, #fdeff9 ); */
     /* background-image: radial-gradient( circle farthest-corner at -4.5% 34.3%,  #C04848 0%, #480048 50% , #C04848); */
@@ -176,8 +185,47 @@ body,html{
 }
 
 #bikestats{
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.year_divider{
+  padding: 0 30px;
+  
+}
+.year_divider_content_wrapper{
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 100px;
+}
+
+.years_section{
+  padding:0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+}
+
+.years_section li{
+  cursor: pointer;
+  font-size: 15px;
+  margin: 3px 0px 3px 0px ;
+  padding: 0 15px;
+  border-radius: 100px;
+
+}
+
+.years.active{
+  background-color: white;
+}
+
+.yearsView {
+  display: none;
+}
+
+.yearsView.active{
+  display: initial;
 }
 
 .stat{
@@ -186,14 +234,15 @@ body,html{
 }
 
 .stat_title{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 18px;
+  font-family: 'Athiti', sans-serif;
+  font-size: 18px;
 }
 
 .stat_value{
     font-size: 25px;
     /* font-family: 'Oswald', sans-serif; */
-    font-family: 'Jost', sans-serif;
+    /* font-family: 'Jost', sans-serif; */
+    font-family: 'Yeseva One', cursive;
     font-weight: bold;
     
 }
@@ -232,12 +281,12 @@ body,html{
 }
 
 #song_title{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
 }
 
 #song_artist{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .playing-status-container{
@@ -291,7 +340,7 @@ body,html{
   #projects{
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
     
   }
 
@@ -556,7 +605,17 @@ body,html{
   content: "";
 }
 
+.darkmode--activated .years{
+  color: black;
+ }
 
+ .darkmode--activated .year_divider_content_wrapper {
+  background-color: #525252;
+ }
+
+ .darkmode--activated .dark-toggle-switch{
+  background: #525252;
+ }
 
 .dark-toggle-switch-container.activated .dark-toggle-switch:before{
   left: 30px;
