@@ -133,6 +133,7 @@ body,html{
 
 .card-title-holder{
   text-align: center;
+  width: 100%;
   
 }
 
@@ -190,7 +191,8 @@ body,html{
 }
 
 .year_divider{
-  padding: 0 30px;
+  width: 190px;
+  margin:auto;
   
 }
 .year_divider_content_wrapper{
@@ -211,9 +213,17 @@ body,html{
   cursor: pointer;
   font-size: 15px;
   margin: 3px 0px 3px 0px ;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   border-radius: 100px;
+}
 
+.years{
+  text-align: center;
+  width: 60px;
+}
+
+#year_all{
+  width: 62px;
 }
 
 .years.active{
@@ -383,7 +393,7 @@ body,html{
   }
 
   #project_img_rps{
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
   .project-item-span{
