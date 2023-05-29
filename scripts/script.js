@@ -128,7 +128,7 @@ function goTo(site){
     }
 
     if (site==="crud-vue-app"){
-        windows.open("https://contact-management-vue.netlify.app/").focus();
+        window.open("https://contact-management-vue.netlify.app/").focus();
     }
 
 }
