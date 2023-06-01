@@ -388,7 +388,7 @@ var biking_2023 = {
     workouts : 7,
     distance: 137.15,
     calories: 3896,
-    avgSpeed: 18.7,
+    avgSpeed: 19.59,
     longest: 23.27
 }
 
