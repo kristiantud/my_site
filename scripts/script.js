@@ -372,3 +372,68 @@ for (var x = 0; x < yearStats.length; x++){
         
     })
 }
+
+
+// biking dashboard data
+
+var biking_2022 = {
+    workouts : 76,
+    distance: 1001.38,
+    calories: 25244,
+    avgSpeed: 18.7,
+    longest: 81.44
+}
+
+var biking_2023 = {
+    workouts : 7,
+    distance: 137.15,
+    calories: 3896,
+    avgSpeed: 18.7,
+    longest: 23.27
+}
+
+
+function populateBikeData(){
+    // year 2022
+    var wv = document.getElementById("workout_value_22");
+    var dv = document.getElementById("distance_value_22");
+    var cv = document.getElementById("calories_value_22");
+    var sv = document.getElementById("avgspeed_value_22");
+    var lv = document.getElementById("longest_value_22");
+
+    wv.innerText = biking_2022.workouts;
+    dv.innerText = biking_2022.distance + " km";
+    cv.innerText = biking_2022.calories;
+    sv.innerText = biking_2022.avgSpeed + " km/h";
+    lv.innerText = biking_2022.longest + " km";
+
+    // year 2023
+    var wv = document.getElementById("workout_value_23");
+    var dv = document.getElementById("distance_value_23");
+    var cv = document.getElementById("calories_value_23");
+    var sv = document.getElementById("avgspeed_value_23");
+    var lv = document.getElementById("longest_value_23");
+
+    
+    wv.innerText = biking_2023.workouts;
+    dv.innerText = biking_2023.distance + " km";
+    cv.innerText = biking_2023.calories;
+    sv.innerText = biking_2023.avgSpeed + " km/h";
+    lv.innerText = biking_2023.longest + " km";
+
+    // year all
+    var wv = document.getElementById("workout_value_all");
+    var dv = document.getElementById("distance_value_all");
+    var cv = document.getElementById("calories_value_all");
+    var sv = document.getElementById("avgspeed_value_all");
+    var lv = document.getElementById("longest_value_all");
+    wv.innerText = biking_2023.workouts + biking_2022.workouts;
+    dv.innerText = biking_2023.distance + biking_2022.distance + " km";
+    cv.innerText = biking_2023.calories + biking_2022.calories;
+    sv.innerText = biking_2023.avgSpeed + " km/h";
+    lv.innerText = biking_2022.longest  + " km";
+
+
+}
+
+populateBikeData();
