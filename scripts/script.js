@@ -123,8 +123,8 @@ function goTo(site){
         window.open("https://kristiantud.github.io/ataraxia/tournaments.html", "_blank").focus();
     }
 
-    if (site==="tiktok"){
-        window.open("https://tiktok.com/@kristiantud").focus();
+    if (site==="chess"){
+        window.open("https://www.chess.com/member/kalawakann").focus();
     }
 
     if (site==="crud-vue-app"){
@@ -385,9 +385,9 @@ var biking_2022 = {
 }
 
 var biking_2023 = {
-    workouts : 8,
-    distance: 156.82,
-    calories: 4456,
+    workouts : 9,
+    distance: 174.90,
+    calories: 4902,
     avgSpeed: 19.24,
     longest: 23.27
 }

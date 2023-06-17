@@ -653,16 +653,22 @@ body,html{
   display: none;
 }
 
-#tiktok{
+#chess{
   text-align: center;
-  background-color: #0a0a0a; 
+  background-color: #0a4714; 
   position: relative;
   height: 160px;
   /* padding: 0; */
 }
 
-#tiktok:hover{
+#chess:hover{
   cursor: pointer;
+}
+
+#logo-chess{
+  padding-top: 10px;
+  height: 120px;
+  width: 70px;
 }
 
 
